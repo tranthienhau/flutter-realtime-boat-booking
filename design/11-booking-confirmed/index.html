@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmed - Boatingo</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Montserrat & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#1a1c1c",
+            "primary": "#161614",
+            "surface-alt": "#F1EEEA",
+            "tertiary-container": "#2b2a2b",
+            "surface-variant": "#e3e2e1",
+            "secondary-fixed-dim": "#e7c17a",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#ffd88e",
+            "support-tint": "#F7EFDD",
+            "on-primary-fixed": "#1c1b1a",
+            "on-error": "#ffffff",
+            "on-primary-container": "#94918e",
+            "surface-tint": "#605e5c",
+            "text-primary": "#181614",
+            "outline-variant": "#cac6bd",
+            "inverse-on-surface": "#f1f0ef",
+            "tertiary-fixed": "#e5e1e2",
+            "inverse-primary": "#c9c6c3",
+            "text-secondary": "#5E5952",
+            "on-tertiary-container": "#939192",
+            "border-hairline": "#E7E3DD",
+            "accent-pressed": "#1C1B1A",
+            "surface-dim": "#dadad9",
+            "surface": "#FFFFFF",
+            "secondary-fixed": "#ffdea3",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#484647",
+            "on-secondary-fixed-variant": "#5c4304",
+            "primary-fixed": "#e6e2de",
+            "outline": "#79776f",
+            "error-container": "#ffdad6",
+            "secondary": "#765a1d",
+            "on-surface-variant": "#484740",
+            "surface-bright": "#faf9f8",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "success": "#16A34A",
+            "on-surface": "#1a1c1c",
+            "on-error-container": "#93000a",
+            "surface-container": "#eeeeed",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed-variant": "#484644",
+            "background": "#faf9f8",
+            "tertiary": "#161617",
+            "accent-tint": "#EAE9E8",
+            "text-tertiary": "#8A8580",
+            "on-secondary-fixed": "#261900",
+            "on-tertiary-fixed": "#1c1b1c",
+            "warning": "#D97706",
+            "surface-container-high": "#e9e8e7",
+            "on-secondary-container": "#795c1f",
+            "inverse-surface": "#2f3130",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "surface-container-low": "#f4f3f2",
+            "danger": "#DC2626",
+            "primary-fixed-dim": "#c9c6c3",
+            "surface-container-highest": "#e3e2e1",
+            "primary-container": "#2b2a28"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-xl": "24px",
+            "gutter": "16px",
+            "space-lg": "16px",
+            "space-md": "12px",
+            "margin": "20px",
+            "space-2xl": "32px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "title-md": ["Montserrat"],
+            "label-md": ["Montserrat"],
+            "body-md": ["Montserrat"],
+            "caption-sm": ["Montserrat"],
+            "display-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-ambient-shadow {
+      box-shadow: 0 1px 2px rgba(24, 22, 20, 0.04), 0 8px 24px rgba(24, 22, 20, 0.06);
+    }
+    .badge-ring-pulse {
+      animation: pulse-ring 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.15);
+        opacity: 0.2;
+      }
+      100% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center">
+<!-- Mobile Viewport Container (393px standard) -->
+<main class="w-full max-w-[393px] bg-background min-h-screen relative flex flex-col pb-10">
+<!-- TopAppBar Shared Component Anchor -->
+<header class="bg-surface dark:bg-surface border-b border-border-hairline dark:border-outline-variant docked full-width top-0 z-40">
+<div class="flex justify-between items-center w-full px-5 py-4 pt-14 max-w-md mx-auto">
+<h1 class="font-title-md text-title-md font-bold text-primary dark:text-primary-fixed tracking-tight">Booking Confirmed</h1>
+<button aria-label="Dismiss booking screen" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container-low dark:hover:bg-primary-container transition-colors duration-150 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-primary text-xl">close</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas (No Bottom Tab Navigation for transactional confirmation screen) -->
+<div class="px-5 pt-6 flex flex-col gap-6">
+<!-- Hero Confirmation Section with Brass/Gold Accent Header & Checkmark Badge -->
+<section class="relative overflow-hidden rounded-[24px] bg-gradient-to-b from-support-tint/60 via-surface to-surface p-6 border border-border-hairline custom-ambient-shadow text-center">
+<!-- Subtle nautical luxury accent line -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -left-8 w-28 h-28 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<!-- Polished circular badge -->
+<div class="relative mx-auto w-20 h-20 mb-4 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-secondary-fixed-dim/30 badge-ring-pulse"></div>
+<div class="w-16 h-16 rounded-full bg-primary-container text-white flex items-center justify-center shadow-md relative z-10 border border-[#D4B06A]/60">
+<span class="material-symbols-outlined text-3xl text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<h2 class="font-display-lg text-display-lg text-text-primary mb-2">You are on board</h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-[290px] mx-auto text-sm leading-relaxed">
+          Your charter reservation is confirmed with <span class="font-medium text-text-primary">Dream Yacht Charter</span>.
+        </p>
+<!-- Live Status Notification Chips -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-5 pt-4 border-t border-border-hairline">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-border-hairline text-success font-caption-sm text-caption-sm shadow-xs">
+<span class="material-symbols-outlined text-success text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span class="text-text-primary">Email sent <span class="text-text-tertiary text-xs">(olivia.h…)</span></span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-border-hairline text-success font-caption-sm text-caption-sm shadow-xs">
+<span class="material-symbols-outlined text-success text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span class="text-text-primary">SMS sent <span class="text-text-tertiary text-xs">(+61…)</span></span>
+</div>
+</div>
+</section>
+<!-- FOCAL Booking Reference Card -->
+<section class="bg-surface rounded-[20px] p-5 border border-border-hairline custom-ambient-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-caption-sm text-caption-sm font-semibold tracking-wider text-text-tertiary">BOOKING REFERENCE</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary bg-support-tint px-2.5 py-0.5 rounded-full border border-secondary-fixed-dim/40">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Verified Booking
+          </span>
+</div>
+<div class="flex items-center justify-between mt-1 bg-surface-alt/70 p-3.5 rounded-xl border border-border-hairline">
+<span class="font-title-md text-title-md font-bold tracking-wider text-primary select-all" id="bookingRefText">
+            BTG-26-0418-7Q3K
+          </span>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline hover:bg-surface-container-low text-text-primary text-xs font-semibold shadow-xs transition-all active:scale-95" id="copyBtn" onclick="copyBookingRef()" type="button">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span id="copyBtnLabel">Copy</span>
+</button>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs text-text-secondary pt-3 border-t border-border-hairline">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-tertiary text-lg">qr_code_2</span>
+<span>Digital boarding pass ready at embarkation</span>
+</div>
+<span class="font-medium text-text-primary">Show QR</span>
+</div>
+</section>
+<!-- Details Card: Vessel & Trip Info with Yacht Image -->
+<section class="bg-surface rounded-[20px] overflow-hidden border border-border-hairline custom-ambient-shadow">
+<div class="relative h-44 w-full bg-surface-container">
+<img alt="Lagoon catamaran sailing at sunset in Whitsundays" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VdD8PSn4Xl77fYBL7mvGQgPcoldxXhIhl77QYYSY4M86zM-Hl5dTI-uGl4MPGbMeoh90nXDjGUR_KI0BqRZmWrnlLjkQK_daeTpWcr2_v3VzPz8zaPJbKe8hvJ-B0VyMq7tUEkRh6UU4-w6lWZPOmGfUsO4aAHvriKBK2GkRUjjYoaWET-z_j9GihEcU1Dg_U31b24tO4WAPlKYzkI7_y07_iWr_4hKpB4Z2t74oGLXaZtemKJ_Dl2Dts"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-black/20"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<span class="inline-block text-[11px] font-semibold uppercase tracking-wider text-secondary-container mb-0.5">Catamaran Charter</span>
+<h3 class="font-title-md text-title-md text-white font-bold leading-tight">Lagoon 380</h3>
+</div>
+<span class="bg-white/20 backdrop-blur-md text-white font-caption-sm text-caption-sm px-2.5 py-1 rounded-full border border-white/30">
+              Whitsundays Passage
+            </span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<!-- Date and Duration -->
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-alt flex items-center justify-center shrink-0 text-text-primary">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</div>
+<div class="flex-1">
+<p class="font-title-md text-sm font-semibold text-text-primary">Sat 18 Oct · 13:30 Sunset Charter</p>
+<p class="font-caption-sm text-caption-sm text-text-secondary mt-0.5">Duration: 4.5 hours · 3 guests aboard</p>
+</div>
+</div>
+<!-- Meeting Point / Marina Pier Details -->
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-alt flex items-center justify-center shrink-0 text-text-primary">
+<span class="material-symbols-outlined text-lg">location_on</span>
+</div>
+<div class="flex-1">
+<p class="font-title-md text-sm font-semibold text-text-primary">Abell Point Marina, Pier C</p>
+<p class="font-caption-sm text-caption-sm text-text-secondary mt-0.5">Airlie Beach, QLD · Slip #14 (Meet at Harbor Master)</p>
+</div>
+</div>
+<!-- Skipper Info -->
+<div class="flex items-start gap-3 pt-3 border-t border-border-hairline">
+<div class="w-9 h-9 rounded-xl bg-support-tint flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-lg">sailing</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<div>
+<p class="font-title-md text-sm font-semibold text-text-primary">Skipper incl. · Capt. Marcus Cole</p>
+<p class="font-caption-sm text-caption-sm text-text-secondary">Master Mariner 200GT · English, French</p>
+</div>
+<span class="w-7 h-7 rounded-full bg-surface-alt flex items-center justify-center text-text-primary hover:bg-border-hairline transition-colors">
+<span class="material-symbols-outlined text-sm">chat</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Check-in & Advisory Bento Tile -->
+<section class="bg-surface-alt/70 rounded-[18px] p-4 border border-border-hairline flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0">info</span>
+<p class="text-xs text-text-secondary leading-relaxed">
+          Please arrive <span class="font-semibold text-text-primary">20 minutes prior</span> for the safety briefing and footwear stowage. Deck shoes or bare feet permitted on board.
+        </p>
+</section>
+<!-- Action Buttons Cluster (Pill Standard) -->
+<footer class="flex flex-col gap-3 pt-2">
+<button class="w-full h-13 py-3.5 px-6 rounded-full bg-primary-container text-white font-title-md text-sm font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-accent-pressed active:scale-[0.98] transition-all" type="button">
+<span>View booking</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button class="w-full h-13 py-3.5 px-6 rounded-full bg-transparent border-[1.5px] border-primary-container text-primary font-title-md text-sm font-semibold flex items-center justify-center gap-2 hover:bg-surface-alt active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-lg">calendar_add_on</span>
+<span>Add to calendar</span>
+</button>
+</footer>
+</div>
+</main>
+<script>
+    function copyBookingRef() {
+      const refCode = "BTG-26-0418-7Q3K";
+      navigator.clipboard.writeText(refCode).then(() => {
+        const label = document.getElementById('copyBtnLabel');
+        const originalText = label.textContent;
+        label.textContent = "Copied!";
+        label.classList.add('text-success');
+        setTimeout(() => {
+          label.textContent = originalText;
+          label.classList.remove('text-success');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+  </script>
+</body></html>

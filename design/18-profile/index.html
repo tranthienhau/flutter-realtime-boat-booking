@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boatingo - Member Profile</title>
+<!-- Google Fonts: Montserrat & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface-variant": "#484740",
+            "text-tertiary": "#8A8580",
+            "secondary-fixed": "#ffdea3",
+            "secondary": "#765a1d",
+            "on-tertiary-fixed": "#1c1b1c",
+            "error": "#ba1a1a",
+            "warning": "#D97706",
+            "on-tertiary-fixed-variant": "#484647",
+            "surface-tint": "#605e5c",
+            "background": "#faf9f8",
+            "tertiary-container": "#2b2a2b",
+            "text-secondary": "#5E5952",
+            "on-secondary-fixed-variant": "#5c4304",
+            "border-hairline": "#E7E3DD",
+            "success": "#16A34A",
+            "on-primary-fixed": "#1c1b1a",
+            "surface-container-high": "#e9e8e7",
+            "primary-fixed": "#e6e2de",
+            "surface-bright": "#faf9f8",
+            "on-surface": "#1a1c1c",
+            "danger": "#DC2626",
+            "inverse-surface": "#2f3130",
+            "surface-alt": "#F1EEEA",
+            "accent-pressed": "#1C1B1A",
+            "surface-dim": "#dadad9",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "accent-tint": "#EAE9E8",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "inverse-on-surface": "#f1f0ef",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f4f3f2",
+            "primary-container": "#2b2a28",
+            "on-primary-fixed-variant": "#484644",
+            "tertiary": "#161617",
+            "inverse-primary": "#c9c6c3",
+            "surface-container": "#eeeeed",
+            "primary": "#161614",
+            "surface-container-highest": "#e3e2e1",
+            "outline-variant": "#cac6bd",
+            "on-primary": "#ffffff",
+            "on-background": "#1a1c1c",
+            "outline": "#79776f",
+            "support-tint": "#F7EFDD",
+            "secondary-container": "#ffd88e",
+            "on-tertiary-container": "#939192",
+            "on-primary-container": "#94918e",
+            "text-primary": "#181614",
+            "primary-fixed-dim": "#c9c6c3",
+            "surface-variant": "#e3e2e1",
+            "tertiary-fixed": "#e5e1e2",
+            "secondary-fixed-dim": "#e7c17a",
+            "on-secondary-container": "#795c1f",
+            "on-secondary-fixed": "#261900",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface": "#FFFFFF"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-md": "12px",
+            "space-lg": "16px",
+            "gutter": "16px",
+            "space-xl": "24px",
+            "space-sm": "8px",
+            "space-2xl": "32px",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "label-md": ["Montserrat"],
+            "display-lg": ["Playfair Display"],
+            "title-md": ["Montserrat"],
+            "caption-sm": ["Montserrat"],
+            "body-md": ["Montserrat"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    body {
+      -webkit-font-smoothing: antialiased;
+      background-color: #FAF9F8;
+    }
+    .ambient-shadow {
+      box-shadow: 0 1px 2px rgba(24, 22, 20, 0.04), 0 8px 24px rgba(24, 22, 20, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen flex justify-center selection:bg-support-tint">
+<!-- Mobile Viewport Frame (393px standard) -->
+<main class="w-full max-w-md bg-background min-h-screen flex flex-col relative pb-32 border-x border-border-hairline shadow-sm overflow-x-hidden">
+<!-- Top Status Bar Area (iOS Style) -->
+<header class="w-full px-7 pt-3.5 pb-2 flex justify-between items-center text-text-primary z-20">
+<span class="font-caption-sm text-caption-sm font-semibold tracking-tight">9:41</span>
+<div class="flex items-center space-x-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[16px]" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- TopAppBar Shared Component -->
+<div class="flex justify-between items-center w-full px-5 py-3 max-w-md mx-auto bg-surface border-b border-border-hairline sticky top-0 z-30 transition-transform duration-150">
+<button aria-label="Go back" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[22px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-title-md font-title-md text-text-primary tracking-tight font-semibold">Profile</h1>
+<button aria-label="Settings" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[22px]" data-icon="settings">settings</span>
+</button>
+</div>
+<!-- Scrollable Canvas Content -->
+<div class="px-5 pt-5 space-y-6">
+<!-- Focal Header Card (Olivia Hart Profile Card) -->
+<section class="bg-surface rounded-2xl p-5 border border-border-hairline ambient-shadow relative overflow-hidden">
+<!-- Subtle nautical backdrop motif watermark -->
+<div class="absolute -right-10 -top-10 w-36 h-36 bg-surface-alt rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+<div class="flex items-start gap-4">
+<!-- Real Photo Avatar with Brass Accent Ring -->
+<div class="relative shrink-0">
+<div class="w-20 h-20 rounded-full p-[2px] bg-secondary border border-secondary shadow-sm">
+<img alt="Portrait of Olivia Hart" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1XEKWb4de4WFdCXu-OHq9fEhvNk7tFlFN3nnkEGc70ku2X0rEAuuP_3cfMBid3VFvAkO5cZjsW6ouNy_LycGUzz1UBkqExEdVFuxZZS13xwJs05I9CuD2Fg7cpRS0Tk9aQOx0sADO4jguWN2yH7I0gJUlCAkkJTJNtYZWawV3GXCKAcwuVgbKeWSnFtOwXWescPl0uJL7pUldhAx-WpnbM-YVn90SZ-BWvb_tf8tpWfrnPcsnNxgB9acWA"/>
+</div>
+<!-- Verification Yacht Club Badge -->
+<div class="absolute -bottom-1 -right-1 bg-surface rounded-full p-0.5 border border-border-hairline shadow-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] block" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Member Identification -->
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<h2 class="font-display-lg text-[22px] leading-7 text-text-primary font-bold tracking-tight">Olivia Hart</h2>
+<!-- Brass Agent Pill -->
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-support-tint border border-secondary/20 font-caption-sm text-[11px] font-semibold text-primary-container tracking-wide">
+                Agent
+              </span>
+</div>
+<p class="font-caption-sm text-caption-sm text-text-secondary mb-2 flex items-center gap-1.5">
+<span>Member since 2025</span>
+<span class="w-1 h-1 rounded-full bg-text-tertiary"></span>
+<span>4 trips</span>
+</p>
+<!-- Status Tag -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-border-hairline">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+<span class="font-caption-sm text-[12px] font-medium text-text-secondary">Gold Charter Status</span>
+</div>
+</div>
+</div>
+<!-- Quick Member Stats Strip -->
+<div class="mt-5 pt-4 border-t border-border-hairline grid grid-cols-3 gap-2 text-center">
+<div class="bg-surface-bright rounded-xl py-2 px-1 border border-border-hairline/60">
+<span class="block font-title-md text-[18px] font-bold text-text-primary leading-tight">4</span>
+<span class="font-caption-sm text-[11px] text-text-tertiary font-medium">Charters</span>
+</div>
+<div class="bg-surface-bright rounded-xl py-2 px-1 border border-border-hairline/60">
+<span class="block font-title-md text-[18px] font-bold text-secondary leading-tight">Gold</span>
+<span class="font-caption-sm text-[11px] text-text-tertiary font-medium">Charter Tier</span>
+</div>
+<div class="bg-surface-bright rounded-xl py-2 px-1 border border-border-hairline/60">
+<span class="block font-title-md text-[18px] font-bold text-text-primary leading-tight">6</span>
+<span class="font-caption-sm text-[11px] text-text-tertiary font-medium">Saved Yachts</span>
+</div>
+</div>
+<!-- Favorite Destination Tag strip -->
+<div class="mt-3.5 flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container-low text-text-secondary">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0" data-icon="anchor">anchor</span>
+<span class="font-caption-sm text-[12px] truncate">Whitsundays &amp; Bali Explorer</span>
+</div>
+<span class="font-caption-sm text-[11px] font-semibold text-secondary uppercase tracking-wider shrink-0 ml-2">Pass Active</span>
+</div>
+</section>
+<!-- Group 1: Account & Bookings -->
+<section class="space-y-2">
+<h3 class="px-2 font-caption-sm text-[12px] font-semibold uppercase tracking-wider text-text-tertiary">Account &amp; Charters</h3>
+<div class="bg-surface rounded-2xl border border-border-hairline ambient-shadow overflow-hidden divide-y divide-border-hairline">
+<!-- Personal details -->
+<a class="flex items-center justify-between p-4 hover:bg-surface-bright active:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-text-primary block">Personal details</span>
+<span class="font-caption-sm text-[12px] text-text-secondary">Passport, verification &amp; contacts</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Payment methods -->
+<a class="flex items-center justify-between p-4 hover:bg-surface-bright active:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="credit_card">credit_card</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-text-primary">Payment methods</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-low border border-border-hairline font-caption-sm text-[12px] font-medium text-text-secondary">
+                Visa 4242
+              </span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</a>
+<!-- Notifications -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-text-primary">Notifications</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-support-tint border border-secondary/20 font-caption-sm text-[11px] font-semibold text-secondary">
+                Email + SMS on
+              </span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Saved boats -->
+<a class="flex items-center justify-between p-4 hover:bg-surface-bright active:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-text-primary">Saved boats</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-surface flex items-center justify-center font-caption-sm text-[12px] font-bold">
+                6
+              </span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Group 2: Preferences & Operations -->
+<section class="space-y-2">
+<h3 class="px-2 font-caption-sm text-[12px] font-semibold uppercase tracking-wider text-text-tertiary">Preferences &amp; Fleet</h3>
+<div class="bg-surface rounded-2xl border border-border-hairline ambient-shadow overflow-hidden divide-y divide-border-hairline">
+<!-- Currency -->
+<a class="flex items-center justify-between p-4 hover:bg-surface-bright active:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-text-primary">Currency</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-low border border-border-hairline font-caption-sm text-[12px] font-medium text-text-secondary">
+                AUD ($)
+              </span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</a>
+<!-- Operator Console -->
+<a class="flex items-center justify-between p-4 hover:bg-surface-bright active:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-support-tint flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="directions_boat">directions_boat</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-text-primary block">Operator console</span>
+<span class="font-caption-sm text-[11px] text-text-secondary">Nausys &amp; Ankor connected</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Group 3: Support & Session -->
+<section class="space-y-2">
+<h3 class="px-2 font-caption-sm text-[12px] font-semibold uppercase tracking-wider text-text-tertiary">Support &amp; Session</h3>
+<div class="bg-surface rounded-2xl border border-border-hairline ambient-shadow overflow-hidden divide-y divide-border-hairline">
+<!-- Help centre -->
+<a class="flex items-center justify-between p-4 hover:bg-surface-bright active:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="support_agent">support_agent</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-text-primary">Help centre</span>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Sign out -->
+<button class="w-full flex items-center justify-between p-4 hover:bg-error-container/20 active:bg-error-container/40 transition-colors text-left">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-error-container/40 flex items-center justify-center text-danger">
+<span class="material-symbols-outlined text-[20px]" data-icon="logout">logout</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-danger">Sign out</span>
+</div>
+<span class="material-symbols-outlined text-danger/60 text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- App Version & Footnote -->
+<footer class="pt-2 pb-6 text-center space-y-1">
+<p class="font-caption-sm text-[12px] text-text-tertiary">Boatingo Concierge v3.14.2 (2025)</p>
+<p class="font-caption-sm text-[11px] text-text-tertiary/80">Sydney · Whitsundays · Mediterranean · Bali</p>
+</footer>
+</div>
+<!-- BottomNavBar Shared Component -->
+<!-- Fixed 4-destination navigation: Explore, Search, Bookings, Profile. Active tab: Profile -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-8 max-w-md mx-auto bg-surface border-t border-border-hairline">
+<!-- 1. Explore (Inactive) -->
+<a aria-label="Explore" class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary active:scale-95 transition-transform duration-150 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="explore">explore</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Explore</span>
+</a>
+<!-- 2. Search (Inactive) -->
+<a aria-label="Search" class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary active:scale-95 transition-transform duration-150 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="manage_search">manage_search</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Search</span>
+</a>
+<!-- 3. Bookings (Inactive) -->
+<a aria-label="Bookings" class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary active:scale-95 transition-transform duration-150 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="sailing">sailing</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Bookings</span>
+</a>
+<!-- 4. Profile (Active - Semantic Match) -->
+<a aria-current="page" aria-label="Profile" class="flex flex-col items-center justify-center text-primary-container font-caption-sm text-caption-sm relative after:content-[''] after:w-1.5 after:h-1.5 after:bg-secondary after:rounded-full after:mt-1 active:scale-95 transition-transform duration-150 py-1 font-semibold" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Profile</span>
+</a>
+</nav>
+</main>
+</body></html>

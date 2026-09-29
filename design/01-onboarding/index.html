@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boatingo - Onboarding</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "border-hairline": "#E7E3DD",
+            "on-tertiary-fixed": "#1c1b1c",
+            "on-secondary-container": "#795c1f",
+            "surface-tint": "#605e5c",
+            "on-surface-variant": "#484740",
+            "secondary-container": "#ffd88e",
+            "surface-bright": "#faf9f8",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#cac6bd",
+            "accent-tint": "#EAE9E8",
+            "surface-dim": "#dadad9",
+            "background": "#faf9f8",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#5c4304",
+            "surface-container-low": "#f4f3f2",
+            "surface-variant": "#e3e2e1",
+            "on-background": "#1a1c1c",
+            "outline": "#79776f",
+            "primary-fixed": "#e6e2de",
+            "inverse-primary": "#c9c6c3",
+            "inverse-surface": "#2f3130",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "tertiary": "#161617",
+            "surface-container-high": "#e9e8e7",
+            "on-secondary": "#ffffff",
+            "text-secondary": "#5E5952",
+            "text-primary": "#181614",
+            "warning": "#D97706",
+            "tertiary-fixed": "#e5e1e2",
+            "secondary": "#765a1d",
+            "accent-pressed": "#1C1B1A",
+            "on-primary-fixed": "#1c1b1a",
+            "tertiary-container": "#2b2a2b",
+            "text-tertiary": "#8A8580",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed-variant": "#484647",
+            "on-primary-container": "#94918e",
+            "primary-container": "#2b2a28",
+            "secondary-fixed-dim": "#e7c17a",
+            "secondary-fixed": "#ffdea3",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#939192",
+            "on-primary-fixed-variant": "#484644",
+            "surface-container-highest": "#e3e2e1",
+            "success": "#16A34A",
+            "danger": "#DC2626",
+            "surface": "#FFFFFF",
+            "on-surface": "#1a1c1c",
+            "on-secondary-fixed": "#261900",
+            "error": "#ba1a1a",
+            "primary": "#161614",
+            "primary-fixed-dim": "#c9c6c3",
+            "support-tint": "#F7EFDD",
+            "surface-alt": "#F1EEEA",
+            "surface-container": "#eeeeed",
+            "inverse-on-surface": "#f1f0ef"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "12px",
+            "space-lg": "16px",
+            "space-2xl": "32px",
+            "space-xl": "24px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "margin": "20px",
+            "gutter": "16px"
+          },
+          "fontFamily": {
+            "label-md": ["Montserrat"],
+            "caption-sm": ["Montserrat"],
+            "body-md": ["Montserrat"],
+            "title-md": ["Montserrat"],
+            "display-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-primary flex items-center justify-center min-h-screen antialiased select-none p-0 md:p-6 font-body-md text-body-md text-surface-container-lowest">
+<!-- Mobile Viewport Wrapper (393px x 852px iPhone aspect) -->
+<main class="relative w-full max-w-[393px] h-[852px] bg-primary overflow-hidden md:rounded-[48px] md:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] md:border md:border-white/10 flex flex-col justify-between">
+<!-- Full Bleed Catamaran Background Image -->
+<img alt="Catamaran in turquoise lagoon at Palawan golden hour" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none scale-100 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEN2lww6EbdcHz45nflKGm7xb9nmGgnFf3HNeIWe9lHtULjcZeuLAyEUaq_afuO6VP4kQSfsdjqLRvwh9nZ13gZc2HwKSUMqkHlHYLhzCcV6ymj_O6Yh1ja7dWBS7W80Yf-7yq_NknQgAdlwTsFFKtL9OusyiX3byU7pnpVvnnWGEZ012BQMJtRY6CHbeS8Y5fG3HLooXU917wZPpCJNXfaMGlZns2Zt2K0ruW-3Arj_qzGKfglwrsCh6fEtAo1HsO1AqzWoUZ2mg"/>
+<!-- Sophisticated Ambient Lighting & Gradient Vignettes -->
+<!-- Top subtle vignette for status bar and header legibility -->
+<div class="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-primary/70 via-primary/30 to-transparent pointer-events-none z-10"></div>
+<!-- Deep graphite bottom vignette for tactile editorial hierarchy -->
+<div class="absolute inset-x-0 bottom-0 h-[520px] bg-gradient-to-t from-primary-container via-primary-container/85 to-transparent pointer-events-none z-10"></div>
+<!-- Status Bar Spacer / iOS Indicator (Simulated Top Safe Area 59px) -->
+<div class="relative z-30 w-full pt-[14px] px-margin flex items-center justify-between pointer-events-none">
+<span class="font-caption-sm text-caption-sm font-semibold tracking-tight text-surface-container-lowest pl-1">9:41</span>
+<div class="flex items-center gap-1.5 text-surface-container-lowest pr-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[19px]">battery_full</span>
+</div>
+</div>
+<!-- Top Navigation Bar (Shared Component JSON Implementation) -->
+<!-- JSON keys translated: leading_icon="sailing", headline="Boatingo", trailing_action_text="Skip", style_shell_layout, flat no shadows -->
+<header class="relative z-30 w-full flex justify-between items-center px-margin pt-space-md pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[26px]" style="font-variation-settings: 'FILL' 1;">sailing</span>
+<h1 class="font-display-lg text-[22px] leading-tight text-surface-container-lowest tracking-tight">Boatingo</h1>
+</div>
+<button class="font-label-md text-label-md text-surface-container-lowest/80 hover:text-surface-container-lowest hover:opacity-80 transition-opacity active:scale-95 duration-150 py-1.5 px-3 rounded-full" type="button">
+        Skip
+      </button>
+</header>
+<!-- Mid Section / Atmospheric Spacer -->
+<div class="flex-1 relative z-20"></div>
+<!-- Focal Typography & Interaction Canvas (Bottom Stacking) -->
+<section class="relative z-30 px-margin pb-[38px] flex flex-col">
+<!-- Live Maritime Micro-Badge -->
+<div class="flex items-center gap-2 mb-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md border border-surface-container-lowest/20 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse"></span>
+<span class="font-caption-sm text-[12px] uppercase font-semibold tracking-wider text-surface-bright">Live Pacific Charters</span>
+</span>
+</div>
+<!-- Headline -->
+<h2 class="font-display-lg text-display-lg text-surface-container-lowest font-bold leading-[38px] tracking-tight mb-space-sm drop-shadow-sm">
+        Book the boat.<br/>See it live.
+      </h2>
+<!-- Subtitle / Body Copy -->
+<p class="font-body-md text-body-md text-surface-bright/85 leading-relaxed max-w-[320px] mb-space-xl">
+        Real-time availability from 400+ operators across Asia Pacific.
+      </p>
+<!-- Carousel Pagination Indicators -->
+<div aria-label="Slides" class="flex items-center gap-2 mb-space-2xl" role="tablist">
+<!-- Active indicator: brass tint elongated pill -->
+<span aria-selected="true" class="w-7 h-1.5 rounded-full bg-secondary-fixed-dim transition-all duration-300" role="tab"></span>
+<!-- Inactive indicators -->
+<span aria-selected="false" class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/35 transition-all duration-300" role="tab"></span>
+<span aria-selected="false" class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/35 transition-all duration-300" role="tab"></span>
+</div>
+<!-- CTA Controls & Account Recovery Action -->
+<div class="w-full flex flex-col items-center gap-space-md">
+<!-- Primary Action Button: Pill shape, pure white fill, graphite typography -->
+<button class="w-full h-14 rounded-full bg-surface-container-lowest text-primary-container font-label-md text-label-md font-semibold tracking-wide flex items-center justify-center gap-2 shadow-[0_1px_2px_rgba(24,22,20,0.04),0_8px_24px_rgba(24,22,20,0.12)] hover:bg-surface-bright active:scale-[0.98] transition-all duration-150" type="button">
+<span>Get started</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Secondary Text Link: Existing Account Sign In -->
+<button class="py-2 px-4 rounded-full font-label-md text-label-md text-surface-bright/80 hover:text-surface-container-lowest hover:underline underline-offset-4 active:scale-95 transition-all duration-150" type="button">
+          I already have an account
+        </button>
+</div>
+<!-- iPhone Home Indicator Line -->
+<div class="w-full flex justify-center pt-space-lg">
+<div class="w-32 h-1 rounded-full bg-surface-container-lowest/40"></div>
+</div>
+</section>
+</main>
+</body></html>

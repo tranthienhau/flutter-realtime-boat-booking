@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign in - Boatingo</title>
+<!-- Google Fonts: Montserrat & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "support-tint": "#F7EFDD",
+            "surface-container": "#eeeeed",
+            "warning": "#D97706",
+            "surface-alt": "#F1EEEA",
+            "accent-pressed": "#1C1B1A",
+            "surface": "#FFFFFF",
+            "primary-fixed-dim": "#c9c6c3",
+            "surface-dim": "#dadad9",
+            "on-primary-container": "#94918e",
+            "on-primary-fixed-variant": "#484644",
+            "text-tertiary": "#8A8580",
+            "secondary-fixed-dim": "#e7c17a",
+            "tertiary-container": "#2b2a2b",
+            "primary": "#161614",
+            "tertiary": "#161617",
+            "outline": "#79776f",
+            "on-primary": "#ffffff",
+            "surface-variant": "#e3e2e1",
+            "error-container": "#ffdad6",
+            "text-primary": "#181614",
+            "primary-fixed": "#e6e2de",
+            "secondary-fixed": "#ffdea3",
+            "on-background": "#1a1c1c",
+            "error": "#ba1a1a",
+            "primary-container": "#2b2a28",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#1c1b1a",
+            "on-secondary-container": "#795c1f",
+            "on-secondary": "#ffffff",
+            "inverse-surface": "#2f3130",
+            "on-surface": "#1a1c1c",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#939192",
+            "inverse-on-surface": "#f1f0ef",
+            "inverse-primary": "#c9c6c3",
+            "border-hairline": "#E7E3DD",
+            "surface-container-low": "#f4f3f2",
+            "surface-container-highest": "#e3e2e1",
+            "danger": "#DC2626",
+            "on-tertiary-fixed": "#1c1b1c",
+            "surface-bright": "#faf9f8",
+            "secondary-container": "#ffd88e",
+            "success": "#16A34A",
+            "surface-container-high": "#e9e8e7",
+            "on-secondary-fixed-variant": "#5c4304",
+            "on-secondary-fixed": "#261900",
+            "on-surface-variant": "#484740",
+            "surface-tint": "#605e5c",
+            "background": "#faf9f8",
+            "tertiary-fixed": "#e5e1e2",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "on-tertiary-fixed-variant": "#484647",
+            "secondary": "#765a1d",
+            "text-secondary": "#5E5952",
+            "outline-variant": "#cac6bd",
+            "accent-tint": "#EAE9E8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "32px",
+            "space-xs": "4px",
+            "gutter": "16px",
+            "space-lg": "16px",
+            "margin": "20px",
+            "space-xl": "24px",
+            "space-sm": "8px",
+            "space-md": "12px"
+          },
+          "fontFamily": {
+            "title-md": ["Montserrat", "sans-serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "body-md": ["Montserrat", "sans-serif"],
+            "label-md": ["Montserrat", "sans-serif"],
+            "caption-sm": ["Montserrat", "sans-serif"]
+          },
+          "fontSize": {
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "ambient": "0 1px 2px rgba(24,22,20,0.04), 0 8px 24px rgba(24,22,20,0.06)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Hide native scrollbar for app-like container */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface-dim flex justify-center items-center min-h-screen p-0 sm:p-4 text-text-primary antialiased font-body-md">
+<!-- Mobile Viewport Shell (393px × 852px) -->
+<div class="relative w-full max-w-[393px] h-[852px] max-h-[852px] bg-background overflow-hidden flex flex-col justify-between shadow-2xl sm:rounded-[44px] border border-border-hairline">
+<!-- Top Bar with iOS status area & Clean Navigation Header -->
+<header class="w-full flex-shrink-0 pt-3 px-5 z-20">
+<!-- Simulated iOS Notch & Status Bar Indicator -->
+<div class="flex justify-between items-center h-7 text-xs font-semibold tracking-tight text-text-primary px-1 select-none">
+<span>9:41</span>
+<div class="flex items-center gap-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[16px] leading-none" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px] leading-none" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[18px] leading-none" data-icon="battery_full">battery_full</span>
+</div>
+</div>
+<!-- App Header Bar matching shared component anchors -->
+<div class="flex items-center justify-between mt-2 h-11">
+<button aria-label="Back" class="w-10 h-10 rounded-full bg-surface border border-border-hairline flex items-center justify-center text-text-primary hover:text-secondary active:scale-95 transition-all duration-150 shadow-sm" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Brand Wordmark Centered -->
+<div class="font-display-lg text-title-md font-bold tracking-tight text-text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="sailing">sailing</span>
+<span>Boatingo</span>
+</div>
+<!-- Help Action as defined in TopAppBar trailing action -->
+<button class="text-label-md font-label-md text-text-secondary hover:text-secondary transition-colors duration-200 active:scale-95 px-2 py-1" type="button">
+          Help
+        </button>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<main class="flex-1 overflow-y-auto no-scrollbar px-margin pt-3 pb-2 flex flex-col">
+<!-- Hero Yacht Marina Visual (Aspect 16:9 / 150px height) -->
+<div class="relative w-full h-[148px] rounded-[20px] overflow-hidden shadow-ambient border border-border-hairline flex-shrink-0 group">
+<img alt="Luxury yacht marina at sunrise" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZeICrFsZMdZxFJ0OlTb5SKVzwjEasdRt0LHOsH8nULpLIvFpZdUmFZivRxBmibMiIPsZu7IZNDP57rN2LPQDZLQkqTzaDhauo23XpkAKzbtoE0sUHyXkyv1NuC7PGB-GyK9qvA-O5xHSPdjqx5mBt0tkaEFf9LBBw31OfACaFfx8PSf1sRt_NuaZMTjjKO9kmjljxl4SIZXjB5bccLIIV7lgLbf7KYmhYpetTpWQ4zM-4WvpC3LErAuDwKL1yQq2uirpqtXAe2lk"/>
+<!-- Refined Brass & Sun-drenched gradient overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-black/10"></div>
+<!-- Subtle status tag overlay -->
+<div class="absolute bottom-3 left-3.5 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-md border border-white/40 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+<span class="text-[11px] font-semibold tracking-wide text-text-primary font-label-md uppercase">Charter Fleet Live</span>
+</div>
+</div>
+<!-- Welcome Headings -->
+<div class="mt-4 mb-5">
+<h1 class="font-display-lg text-display-lg text-text-primary tracking-tight">
+          Welcome aboard
+        </h1>
+<p class="font-body-md text-body-md text-text-secondary mt-1 leading-snug">
+          Sign in to access your charters, live tracking, and bookings.
+        </p>
+</div>
+<!-- Form Inputs & Controls -->
+<form class="space-y-3.5 flex-shrink-0" onsubmit="event.preventDefault();">
+<!-- Email Input -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-text-primary font-medium" for="email">
+            Email
+          </label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 bg-surface text-text-primary font-body-md text-base rounded-xl border border-border-hairline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all shadow-sm" id="email" name="email" placeholder="name@luxury.com" type="email" value="olivia.hart@gmail.com"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="block font-label-md text-label-md text-text-primary font-medium" for="password">
+              Password
+            </label>
+<a class="font-label-md text-caption-sm text-primary-container font-medium hover:underline transition-colors" href="#">
+              Forgot password?
+            </a>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-3.5 pr-11 bg-surface text-text-primary font-body-md text-base rounded-xl border border-border-hairline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all shadow-sm tracking-widest" id="password" name="password" placeholder="Enter your password" type="password" value="••••••••••••"/>
+<button aria-label="Toggle password visibility" class="absolute right-3.5 text-text-tertiary hover:text-text-primary transition-colors flex items-center justify-center p-1" id="togglePassword" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary Action Pill Button -->
+<button class="w-full h-[52px] mt-2 rounded-full bg-primary-container text-white font-label-md text-body-md font-semibold tracking-wide flex items-center justify-center gap-2 hover:bg-accent-pressed active:scale-95 transition-all duration-150 shadow-md" type="submit">
+<span>Sign in</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Hairline Divider -->
+<div class="relative my-4 flex items-center justify-center">
+<div class="w-full border-t border-border-hairline"></div>
+<span class="absolute px-3 bg-background text-caption-sm font-label-md text-text-tertiary lowercase tracking-wider">
+          or
+        </span>
+</div>
+<!-- Social Auth / Alternate Logins -->
+<div class="space-y-2.5 flex-shrink-0">
+<!-- Apple Sign In -->
+<button class="w-full h-12 rounded-full bg-surface border border-border-hairline text-primary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-3 hover:bg-surface-alt active:scale-95 transition-all duration-150 shadow-sm" type="button">
+<svg class="w-4 h-4 fill-current text-primary-container" fill="none" viewbox="0 0 170 170" xmlns="http://www.w3.org/2000/svg">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.41-6.08-3.69-3.04-7.67-7.81-11.94-14.32-6.74-10.27-12-22.18-15.78-35.73-3.77-13.55-5.66-26.28-5.66-38.19 0-16.14 4.35-29.42 13.06-39.84 8.71-10.42 19.3-15.77 31.78-16.03 4.8 0 10.15 1.25 16.05 3.76 5.9 2.5 9.77 3.82 11.61 3.94 1.49-.12 5.56-1.5 12.22-4.12 6.66-2.63 12.24-3.75 16.73-3.37 12.7.75 23.01 5.49 30.93 14.22-11.04 6.72-16.43 16.01-16.19 27.87.25 9.49 3.97 17.52 11.16 24.08 7.2 6.57 15.54 10.36 25.04 11.39-2.24 6.84-5.07 13.88-8.5 21.11zM119.22 31.83c0-7.35 2.65-14.16 7.96-20.44 5.31-6.28 11.83-10.38 19.55-12.3 1.07 7.09-.7 13.84-5.32 20.25-4.62 6.4-11.31 10.63-20.08 12.69-.35-.7-.85-1.57-1.51-2.61-.4-1.04-.6-1.9-.6-2.59z"></path>
+</svg>
+<span>Continue with Apple</span>
+</button>
+<!-- Google Sign In -->
+<button class="w-full h-12 rounded-full bg-surface border border-border-hairline text-primary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-3 hover:bg-surface-alt active:scale-95 transition-all duration-150 shadow-sm" type="button">
+<svg class="w-4 h-4" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span>Continue with Google</span>
+</button>
+</div>
+<!-- New to Boatingo link -->
+<div class="text-center mt-3 mb-1">
+<span class="text-caption-sm text-text-secondary">New to Boatingo?</span>
+<a class="text-caption-sm text-primary-container font-semibold hover:underline ml-1" href="#">Create an account</a>
+</div>
+</main>
+<!-- Footer Area: Disclaimer & iOS Home Indicator Bar -->
+<footer class="w-full flex-shrink-0 px-gutter pb-2 pt-1 flex flex-col items-center">
+<p class="font-caption-sm text-[12px] leading-tight text-text-tertiary text-center max-w-[320px]">
+        Booking confirmations arrive by email and SMS.
+      </p>
+<!-- Standard iOS Home Indicator Line -->
+<div class="w-32 h-1 bg-primary/20 rounded-full mt-3 mb-1"></div>
+</footer>
+</div>
+<!-- Interactive JavaScript for micro-interactions -->
+<script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.textContent = 'visibility_off';
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.textContent = 'visibility';
+      }
+    }
+  </script>
+</body></html>

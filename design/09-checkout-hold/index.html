@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Checkout - Boatingo</title>
+<!-- Google Fonts: Montserrat & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined (Exact Link required) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config directly from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#161614",
+            "surface-container-low": "#f4f3f2",
+            "on-surface": "#1a1c1c",
+            "on-tertiary-container": "#939192",
+            "text-secondary": "#5E5952",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#1c1b1c",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#faf9f8",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#795c1f",
+            "on-primary-fixed-variant": "#484644",
+            "on-primary-container": "#94918e",
+            "surface-container": "#eeeeed",
+            "on-surface-variant": "#484740",
+            "on-error-container": "#93000a",
+            "danger": "#DC2626",
+            "outline": "#79776f",
+            "secondary": "#765a1d",
+            "primary-fixed-dim": "#c9c6c3",
+            "border-hairline": "#E7E3DD",
+            "background": "#faf9f8",
+            "accent-pressed": "#1C1B1A",
+            "support-tint": "#F7EFDD",
+            "surface-variant": "#e3e2e1",
+            "surface-dim": "#dadad9",
+            "secondary-fixed-dim": "#e7c17a",
+            "success": "#16A34A",
+            "surface": "#FFFFFF",
+            "on-secondary-fixed": "#261900",
+            "accent-tint": "#EAE9E8",
+            "surface-tint": "#605e5c",
+            "on-tertiary-fixed-variant": "#484647",
+            "tertiary-container": "#2b2a2b",
+            "inverse-surface": "#2f3130",
+            "outline-variant": "#cac6bd",
+            "on-secondary": "#ffffff",
+            "text-tertiary": "#8A8580",
+            "text-primary": "#181614",
+            "tertiary-fixed": "#e5e1e2",
+            "secondary-fixed": "#ffdea3",
+            "inverse-primary": "#c9c6c3",
+            "warning": "#D97706",
+            "surface-alt": "#F1EEEA",
+            "primary-container": "#2b2a28",
+            "primary-fixed": "#e6e2de",
+            "secondary-container": "#ffd88e",
+            "on-primary-fixed": "#1c1b1a",
+            "surface-container-highest": "#e3e2e1",
+            "on-secondary-fixed-variant": "#5c4304",
+            "error-container": "#ffdad6",
+            "on-background": "#1a1c1c",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#161617",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#f1f0ef",
+            "surface-container-high": "#e9e8e7",
+            "brass": "#D4B06A",
+            "graphite": "#2B2A28"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "8px",
+            "space-lg": "16px",
+            "margin": "20px",
+            "space-2xl": "32px",
+            "space-xl": "24px",
+            "gutter": "16px",
+            "space-md": "12px",
+            "space-xs": "4px"
+          },
+          "fontFamily": {
+            "body-md": ["Montserrat", "sans-serif"],
+            "title-md": ["Montserrat", "sans-serif"],
+            "label-md": ["Montserrat", "sans-serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "caption-sm": ["Montserrat", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "ambient": "0 1px 2px rgba(24,22,20,0.04), 0 8px 24px rgba(24,22,20,0.06)",
+            "elevated": "0 4px 20px -2px rgba(24,22,20,0.08)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 22px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tnum {
+      font-variant-numeric: tabular-nums;
+    }
+    /* Subtle pulse animation for live green indicator */
+    @keyframes subtle-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.15); }
+    }
+    .animate-live-dot {
+      animation: subtle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    /* Smooth countdown circular stroke */
+    .circle-timer {
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased selection:bg-support-tint selection:text-text-primary flex justify-center min-h-screen">
+<!-- Mobile Viewport Container (393x852 iPhone Frame standard) -->
+<main class="w-full max-w-[393px] min-h-[852px] bg-background relative flex flex-col pb-36 shadow-2xl">
+<!-- Top Safe Area Spacing (~54px) -->
+<div class="h-12 w-full flex-shrink-0"></div>
+<!-- SHARED COMPONENT: TopAppBar (Executing styles from JSON) -->
+<header class="w-full h-14 bg-surface flex items-center justify-between px-margin border-b border-border-hairline z-40 sticky top-0 transition-colors duration-150">
+<!-- Leading Icon: arrow_back -->
+<button aria-label="Go back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-container-low active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Headline -->
+<h1 class="font-title-md text-title-md text-text-primary font-semibold tracking-tight text-center">
+        Checkout
+      </h1>
+<!-- Trailing Icon: help_outline -->
+<button aria-label="Help and support" class="w-10 h-10 -mr-2 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-container-low active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</header>
+<!-- Scrollable Content Canvas -->
+<div class="px-margin pt-space-lg flex flex-col space-y-space-xl">
+<!-- 1. BOLD FOCAL ELEMENT: Brass Circular Countdown Ring -->
+<section class="bg-surface rounded-2xl p-space-xl border border-border-hairline shadow-ambient flex flex-col items-center text-center relative overflow-hidden">
+<!-- Background subtle glow -->
+<div class="absolute -top-12 -right-12 w-36 h-36 bg-support-tint rounded-full filter blur-2xl opacity-60 pointer-events-none"></div>
+<!-- Live Sync Pill -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-alt rounded-full mb-space-lg border border-border-hairline">
+<span class="w-2 h-2 rounded-full bg-success animate-live-dot"></span>
+<span class="font-caption-sm text-caption-sm font-semibold text-text-primary">Live</span>
+<span class="text-text-tertiary text-xs">·</span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">synced 12s ago</span>
+</div>
+<!-- Circular Progress Timer Gauge -->
+<div class="relative w-36 h-36 flex items-center justify-center my-1">
+<svg class="w-full h-full circle-timer" viewbox="0 0 120 120">
+<!-- Background Track -->
+<circle cx="60" cy="60" fill="none" r="52" stroke="#F1EEEA" stroke-width="7"></circle>
+<!-- Active Brass Progress (~78% remaining) -->
+<circle cx="60" cy="60" fill="none" r="52" stroke="#D4B06A" stroke-dasharray="326.7" stroke-dashoffset="65" stroke-linecap="round" stroke-width="7"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-title-md text-[28px] font-bold text-text-primary tracking-tight tnum leading-none" id="countdown">09:42</span>
+<span class="font-caption-sm text-[11px] font-medium text-text-secondary mt-1 tracking-wider uppercase">remaining</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-text-primary">Seats held for you</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brass"></span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">3 Reserved</span>
+</div>
+</section>
+<!-- 2. BOOKING SUMMARY CARD -->
+<section class="bg-surface rounded-2xl p-space-lg border border-border-hairline shadow-ambient">
+<div class="flex items-start gap-3.5">
+<!-- Real Yacht Photo Thumbnail from image context -->
+<div class="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-alt border border-border-hairline">
+<img alt="Luxury Lagoon 380 catamaran cruising through turquoise Whitsundays waters during a golden sunset" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VdD8PSn4Xl77fYBL7mvGQgPcoldxXhIhl77QYYSY4M86zM-Hl5dTI-uGl4MPGbMeoh90nXDjGUR_KI0BqRZmWrnlLjkQK_daeTpWcr2_v3VzPz8zaPJbKe8hvJ-B0VyMq7tUEkRh6UU4-w6lWZPOmGfUsO4aAHvriKBK2GkRUjjYoaWET-z_j9GihEcU1Dg_U31b24tO4WAPlKYzkI7_y07_iWr_4hKpB4Z2t74oGLXaZtemKJ_Dl2Dts"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-display-lg text-[19px] font-bold text-text-primary truncate leading-tight">Lagoon 380</h2>
+<!-- Seats held chip in support-tint with graphite text -->
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-support-tint text-primary text-[11px] font-semibold flex-shrink-0 border border-[#eddcb5]">
+                3 seats held
+              </span>
+</div>
+<p class="font-caption-sm text-caption-sm text-text-secondary mt-1 leading-snug">
+              Whitsundays · Sat 18 Oct
+            </p>
+<p class="font-caption-sm text-caption-sm text-text-tertiary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-text-secondary" data-icon="schedule">schedule</span>
+              13:30 Sunset Charter · 3 Guests
+            </p>
+</div>
+</div>
+<!-- Hairline Divider -->
+<div class="h-[1px] bg-border-hairline my-space-md"></div>
+<!-- Breakdown Details -->
+<div class="space-y-2 text-[13px] font-caption-sm">
+<div class="flex justify-between items-center text-text-secondary">
+<span>Passage Charter (3 × A$360)</span>
+<span class="font-medium text-text-primary tnum">A$1,080</span>
+</div>
+<div class="flex justify-between items-center text-text-secondary">
+<span>Marine Park &amp; Wharfage Levy</span>
+<span class="font-medium text-text-primary tnum">A$100</span>
+</div>
+<div class="h-[1px] bg-border-hairline my-1.5"></div>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-label-md text-label-md font-semibold text-text-primary">Total Amount Due</span>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-text-primary tnum">A$1,180</span>
+<p class="text-[11px] text-text-tertiary">Includes GST &amp; fuel surcharge</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. LEAD GUEST SECTION -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-title-md text-[17px] font-semibold text-text-primary">Lead Guest</h3>
+<span class="font-caption-sm text-caption-sm text-text-secondary">Primary Contact</span>
+</div>
+<div class="bg-surface rounded-2xl p-space-lg border border-border-hairline shadow-ambient space-y-space-md">
+<!-- Input 1: Full Name -->
+<div>
+<label class="block font-caption-sm text-caption-sm font-semibold text-text-secondary mb-1.5" for="guest-name">
+              Full Legal Name
+            </label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface border border-border-hairline text-text-primary font-body-md text-[15px] focus:outline-none focus:ring-2 focus:ring-brass focus:border-transparent transition-all shadow-sm" id="guest-name" type="text" value="Olivia Hart"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 text-success">
+<span class="material-symbols-outlined text-[20px]" data-icon="check_circle">check_circle</span>
+</span>
+</div>
+</div>
+<!-- Input 2: Mobile Number -->
+<div>
+<label class="block font-caption-sm text-caption-sm font-semibold text-text-secondary mb-1.5" for="guest-mobile">
+              Mobile Contact
+            </label>
+<div class="flex rounded-xl border border-border-hairline bg-surface overflow-hidden focus-within:ring-2 focus-within:ring-brass focus-within:border-transparent shadow-sm">
+<div class="flex items-center px-3 bg-surface-alt border-r border-border-hairline gap-1.5">
+<span class="text-base select-none">🇦🇺</span>
+<span class="font-label-md text-caption-sm font-semibold text-text-secondary tnum">+61</span>
+</div>
+<input class="w-full h-12 px-3.5 bg-surface text-text-primary font-body-md text-[15px] focus:outline-none border-0" id="guest-mobile" type="tel" value="412 555 019"/>
+</div>
+<p class="font-caption-sm text-[11px] text-text-tertiary mt-1.5">Used for boarding notifications &amp; skipper SMS updates.</p>
+</div>
+</div>
+</section>
+<!-- 4. PAYMENT METHOD SECTION -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-title-md text-[17px] font-semibold text-text-primary">Payment Method</h3>
+<span class="font-caption-sm text-caption-sm text-brass font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]" data-icon="lock">lock</span>
+            Encrypted
+          </span>
+</div>
+<div class="bg-surface rounded-2xl p-space-md border border-border-hairline shadow-ambient">
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-alt/70 border border-border-hairline">
+<div class="flex items-center gap-3">
+<!-- Selected Radio Circle -->
+<div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-surface">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<!-- Card Icon & Name -->
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-7 rounded bg-[#1A1F71] text-white flex items-center justify-center font-bold text-[10px] tracking-widest shadow-xs">
+                  VISA
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-text-primary tnum">
+                    Visa ending 4242
+                  </div>
+<div class="font-caption-sm text-caption-sm text-text-tertiary tnum">
+                    Expires 08/28
+                  </div>
+</div>
+</div>
+</div>
+<!-- Change Button -->
+<button class="px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-surface-container-low rounded-lg transition-colors border border-border-hairline" type="button">
+              Change
+            </button>
+</div>
+</div>
+</section>
+<!-- 5. IMPORTANT INFO CALLOUT -->
+<section class="rounded-xl p-3.5 bg-support-tint border border-[#eddcb5] flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5" data-icon="hourglass_top">hourglass_top</span>
+<p class="font-caption-sm text-caption-sm text-text-secondary leading-relaxed">
+          If payment fails or the timer ends, your reserved seats are instantly released to waiting guests.
+        </p>
+</section>
+</div>
+<!-- 6. FIXED BOTTOM PAYMENT BAR (No Tab Bar present) -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[393px] bg-surface border-t border-border-hairline px-margin pt-3.5 pb-8 shadow-elevated z-50">
+<div class="flex items-center justify-between mb-3 px-1">
+<div>
+<span class="font-caption-sm text-caption-sm text-text-tertiary uppercase tracking-wider block">Total Due</span>
+<span class="font-title-md text-[22px] font-bold text-text-primary tnum leading-tight">A$1,180</span>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary bg-surface-alt px-2.5 py-1 rounded-full border border-border-hairline">
+<span class="material-symbols-outlined text-[15px] text-brass" data-icon="verified_user">verified_user</span>
+<span class="font-caption-sm text-[11px] font-medium text-text-secondary">256-bit encrypted</span>
+</div>
+</div>
+<!-- Full-Width Primary Pill Button in Graphite #2B2A28 -->
+<button class="w-full h-13 py-3.5 px-6 rounded-full bg-primary-container text-on-primary font-title-md text-[16px] font-semibold shadow-md active:bg-accent-pressed active:scale-[0.99] transition-all duration-150 flex items-center justify-center gap-2 group" type="button">
+<span>Pay A$1,180</span>
+<span class="material-symbols-outlined text-[19px] transition-transform duration-150 group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Bottom Safe Area Indicator line -->
+<div class="w-32 h-1 bg-[#181614]/20 rounded-full mx-auto mt-4"></div>
+</div>
+</main>
+<!-- Interactive micro-interaction for countdown ticking -->
+<script>
+    (function initCountdown() {
+      let totalSeconds = 9 * 60 + 42;
+      const display = document.getElementById('countdown');
+      if (!display) return;
+
+      const interval = setInterval(() => {
+        if (totalSeconds <= 0) {
+          clearInterval(interval);
+          display.textContent = "00:00";
+          return;
+        }
+        totalSeconds--;
+        const mins = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+        const secs = String(totalSeconds % 60).padStart(2, '0');
+        display.textContent = `${mins}:${secs}`;
+      }, 1000);
+    })();
+  </script>
+</body></html>

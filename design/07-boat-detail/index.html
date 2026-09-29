@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Lagoon 380 · 4 cab. | Boatingo</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#e5e1e2",
+            "secondary-fixed-dim": "#e7c17a",
+            "outline-variant": "#cac6bd",
+            "primary-fixed": "#e6e2de",
+            "surface-container-low": "#f4f3f2",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#e9e8e7",
+            "surface-alt": "#F1EEEA",
+            "secondary": "#765a1d",
+            "text-primary": "#181614",
+            "success": "#16A34A",
+            "on-secondary-fixed-variant": "#5c4304",
+            "primary-container": "#2b2a28",
+            "danger": "#DC2626",
+            "on-tertiary-fixed": "#1c1b1c",
+            "on-primary-container": "#94918e",
+            "surface-variant": "#e3e2e1",
+            "accent-pressed": "#1C1B1A",
+            "primary-fixed-dim": "#c9c6c3",
+            "inverse-surface": "#2f3130",
+            "on-secondary-fixed": "#261900",
+            "on-background": "#1a1c1c",
+            "surface": "#FFFFFF",
+            "error-container": "#ffdad6",
+            "tertiary": "#161617",
+            "on-primary-fixed": "#1c1b1a",
+            "inverse-primary": "#c9c6c3",
+            "on-surface-variant": "#484740",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#2b2a2b",
+            "surface-container": "#eeeeed",
+            "surface-container-highest": "#e3e2e1",
+            "outline": "#79776f",
+            "on-primary-fixed-variant": "#484644",
+            "background": "#faf9f8",
+            "accent-tint": "#EAE9E8",
+            "support-tint": "#F7EFDD",
+            "secondary-container": "#ffd88e",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#ffdea3",
+            "on-secondary-container": "#795c1f",
+            "surface-tint": "#605e5c",
+            "on-tertiary-fixed-variant": "#484647",
+            "on-tertiary-container": "#939192",
+            "warning": "#D97706",
+            "text-secondary": "#5E5952",
+            "text-tertiary": "#8A8580",
+            "surface-bright": "#faf9f8",
+            "error": "#ba1a1a",
+            "primary": "#161614",
+            "on-surface": "#1a1c1c",
+            "inverse-on-surface": "#f1f0ef",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "surface-dim": "#dadad9",
+            "border-hairline": "#E7E3DD"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "12px",
+            "space-xs": "4px",
+            "space-xl": "24px",
+            "margin": "20px",
+            "space-lg": "16px",
+            "space-2xl": "32px",
+            "gutter": "16px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "label-md": ["Montserrat", "sans-serif"],
+            "caption-sm": ["Montserrat", "sans-serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "body-md": ["Montserrat", "sans-serif"],
+            "title-md": ["Montserrat", "sans-serif"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "display-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "23px", "fontWeight": "400" }],
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          },
+          "boxShadow": {
+            "soft-card": "0 1px 3px rgba(24,22,20,0.04), 0 8px 24px rgba(24,22,20,0.06)",
+            "ambient-sheet": "0 -4px 20px rgba(24,22,20,0.05)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars for clean tactile swipe feel */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F9F8F7] text-text-primary antialiased font-body-md flex justify-center min-h-screen select-none">
+<!-- Mobile Viewport Canvas Container (393px width reference) -->
+<div class="w-full max-w-[393px] bg-[#F9F8F7] relative min-h-screen flex flex-col pb-32">
+<!-- Top Floating Actions (Shared Component Anchor Protocol) -->
+<header class="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+<div class="flex justify-between items-center w-full px-space-lg pt-space-lg max-w-[393px] mx-auto">
+<!-- Back Button -->
+<button aria-label="Go back" class="pointer-events-auto w-10 h-10 rounded-full bg-surface/85 backdrop-blur-md border border-white/60 flex items-center justify-center text-text-primary shadow-sm hover:bg-surface active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<!-- Right Action Cluster -->
+<div class="pointer-events-auto flex items-center gap-2">
+<button aria-label="Share yacht" class="w-10 h-10 rounded-full bg-surface/85 backdrop-blur-md border border-white/60 flex items-center justify-center text-text-primary shadow-sm hover:bg-surface active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[19px]">share</span>
+</button>
+<button aria-label="Save to favorites" class="w-10 h-10 rounded-full bg-surface/85 backdrop-blur-md border border-white/60 flex items-center justify-center text-text-primary shadow-sm hover:bg-surface active:scale-95 transition-all" id="favorite-toggle" type="button">
+<span class="material-symbols-outlined text-[20px]" id="favorite-icon">favorite</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Media Section -->
+<section class="relative w-full h-[380px] bg-primary-container overflow-hidden">
+<!-- High-fidelity Yacht Image from User Input -->
+<img alt="Lagoon 380 Catamaran Serenity sailing in Whitsundays turquoise waters at sunset" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZKICPKZb3_liRdP-kj_BVXjz1u4nXiAt0ctUOhKpqS4H2DstWCUcdfyrfQFrjF8hF3GhIzc9I-XuXegpC2vR9yHRsfhgWsegUUkzXANto5l2_aHl8AOcfPnU26gj2UAdHK7oNfnTfRylV7lTQ6Lv5vnYYrQ3D7zhArzLlOrCMpiZvuIwXwaieM-BDbcMGL7IrlqwKB4HZeXjNYhJCaI7sfdyz5rmzGsgdaukEGj3El9LOF-uSnBUnFuOLPdTcm-AlnBNvExbdWGo"/>
+<!-- Subtle Scrim for Depth -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/50 pointer-events-none"></div>
+<div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#F9F8F7] to-transparent pointer-events-none"></div>
+<!-- Top Overlay Badge: Live Inventory Tag -->
+<div class="absolute top-[68px] left-space-lg z-10">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-border-hairline shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
+</span>
+<span class="font-caption-sm text-caption-sm text-text-primary font-medium tracking-tight">Live · Nausys 8s ago</span>
+</div>
+</div>
+<!-- Photo Gallery Dots & Counter Badge -->
+<div class="absolute bottom-5 inset-x-0 px-space-lg flex justify-between items-center z-10">
+<!-- Carousel Indicator Dots -->
+<div class="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-2.5 py-1.5 rounded-full">
+<div class="w-5 h-1.5 bg-secondary-fixed-dim rounded-full transition-all"></div>
+<div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+</div>
+<!-- Media Counter Chip -->
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-sm text-text-primary text-xs font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+<span>1 / 24</span>
+</div>
+</div>
+</section>
+<!-- Main Content Canvas -->
+<main class="px-margin -mt-2 relative z-20 flex flex-col gap-space-xl">
+<!-- Vessel Header & Primary Metadata -->
+<section class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold tracking-wider uppercase text-secondary">Bareboat / Crewed Catamaran</span>
+<div class="flex items-center gap-1 text-xs font-medium text-text-secondary bg-surface-container-low px-2 py-0.5 rounded border border-border-hairline">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified_user</span>
+<span>Charter Verified</span>
+</div>
+</div>
+<h1 class="font-display-lg text-display-lg text-text-primary tracking-tight">
+          Lagoon 380 · 4 cab.
+        </h1>
+<div class="flex items-center gap-1.5 text-text-secondary font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-text-tertiary">location_on</span>
+<span>Airlie Beach, Whitsundays</span>
+<span class="text-text-tertiary">·</span>
+<span class="text-text-primary font-medium">Dream Yacht Charter</span>
+</div>
+<!-- Rating & Performance Strip -->
+<div class="flex items-center gap-3 mt-1 pt-1.5 border-t border-border-hairline/80">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-[15px] font-bold text-text-primary">4.88</span>
+<span class="text-xs text-text-tertiary underline decoration-text-tertiary/40 underline-offset-2">(126 reviews)</span>
+</div>
+<span class="text-border-hairline">|</span>
+<div class="flex items-center gap-1 text-xs text-text-secondary font-medium">
+<span class="material-symbols-outlined text-[15px] text-success">sailing</span>
+<span>Fast turnaround</span>
+</div>
+</div>
+</section>
+<!-- Key Specifications Bento Grid -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-[17px] text-text-primary">Vessel Specifications</h2>
+<span class="text-xs text-text-tertiary font-label-md">Direct from Manifest</span>
+</div>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Length -->
+<div class="bg-surface rounded-xl p-3 border border-border-hairline shadow-soft-card flex flex-col justify-between h-[84px]">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">straighten</span>
+<div>
+<p class="text-[11px] text-text-tertiary font-caption-sm leading-tight">Length</p>
+<p class="text-sm font-semibold text-text-primary font-label-md">11.6 m (38ft)</p>
+</div>
+</div>
+<!-- Cabins -->
+<div class="bg-surface rounded-xl p-3 border border-border-hairline shadow-soft-card flex flex-col justify-between h-[84px]">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">bed</span>
+<div>
+<p class="text-[11px] text-text-tertiary font-caption-sm leading-tight">Layout</p>
+<p class="text-sm font-semibold text-text-primary font-label-md">4 cabins</p>
+</div>
+</div>
+<!-- Berths -->
+<div class="bg-surface rounded-xl p-3 border border-border-hairline shadow-soft-card flex flex-col justify-between h-[84px]">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">hotel</span>
+<div>
+<p class="text-[11px] text-text-tertiary font-caption-sm leading-tight">Berths</p>
+<p class="text-sm font-semibold text-text-primary font-label-md">8 berths</p>
+</div>
+</div>
+<!-- Max Guests -->
+<div class="bg-surface rounded-xl p-3 border border-border-hairline shadow-soft-card flex flex-col justify-between h-[84px]">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">groups</span>
+<div>
+<p class="text-[11px] text-text-tertiary font-caption-sm leading-tight">Capacity</p>
+<p class="text-sm font-semibold text-text-primary font-label-md">10 guests</p>
+</div>
+</div>
+<!-- Built Year -->
+<div class="bg-surface rounded-xl p-3 border border-border-hairline shadow-soft-card flex flex-col justify-between h-[84px]">
+<span class="material-symbols-outlined text-[20px] text-text-secondary">calendar_today</span>
+<div>
+<p class="text-[11px] text-text-tertiary font-caption-sm leading-tight">Year refit</p>
+<p class="text-sm font-semibold text-text-primary font-label-md">2019 / 2023</p>
+</div>
+</div>
+<!-- Skipper Included Status -->
+<div class="bg-support-tint/60 rounded-xl p-3 border border-secondary-fixed-dim/60 shadow-soft-card flex flex-col justify-between h-[84px]">
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<p class="text-[11px] text-secondary font-caption-sm font-medium leading-tight">Crew</p>
+<p class="text-xs font-bold text-text-primary font-label-md leading-tight">Skipper incl.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FOCAL SECTION: Next 7 Days Availability Strip -->
+<section class="bg-surface rounded-2xl p-4 border border-border-hairline shadow-soft-card flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-[17px] text-text-primary">Next 7 days</h2>
+<span class="bg-support-tint text-secondary font-caption-sm text-[11px] font-semibold px-2 py-0.5 rounded-full border border-secondary-fixed-dim/50">
+              Live sync
+            </span>
+</div>
+<span class="text-xs font-medium text-text-tertiary">Tap date to inspect</span>
+</div>
+<!-- Horizontal Interactive Day Rail -->
+<div class="flex items-center justify-between gap-1.5 overflow-x-auto no-scrollbar py-1">
+<!-- Day 1: Thu 23 (Available - Selected default) -->
+<button class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border-2 border-primary bg-primary text-white transition-all shadow-sm" type="button">
+<span class="text-[10px] uppercase font-bold tracking-tight opacity-80">Thu</span>
+<span class="text-base font-bold leading-none">23</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim mt-0.5"></span>
+</button>
+<!-- Day 2: Fri 24 (Available) -->
+<button class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border border-success/40 bg-success/5 hover:border-success transition-all" type="button">
+<span class="text-[10px] uppercase font-semibold text-text-secondary tracking-tight">Fri</span>
+<span class="text-base font-bold text-text-primary leading-none">24</span>
+<span class="w-1.5 h-1.5 rounded-full bg-success mt-0.5"></span>
+</button>
+<!-- Day 3: Sat 25 (Limited - Warm brass tint) -->
+<button class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border border-secondary-fixed-dim bg-support-tint transition-all" type="button">
+<span class="text-[10px] uppercase font-bold text-secondary tracking-tight">Sat</span>
+<span class="text-base font-bold text-text-primary leading-none">25</span>
+<span class="text-[9px] font-bold text-secondary leading-none">2 left</span>
+</button>
+<!-- Day 4: Sun 26 (Limited) -->
+<button class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border border-secondary-fixed-dim bg-support-tint transition-all" type="button">
+<span class="text-[10px] uppercase font-bold text-secondary tracking-tight">Sun</span>
+<span class="text-base font-bold text-text-primary leading-none">26</span>
+<span class="text-[9px] font-bold text-secondary leading-none">1 left</span>
+</button>
+<!-- Day 5: Mon 27 (Full / Sold out) -->
+<div class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border border-dashed border-border-hairline bg-surface-container-low opacity-60">
+<span class="text-[10px] uppercase font-semibold text-text-tertiary tracking-tight">Mon</span>
+<span class="text-base font-bold text-text-tertiary line-through leading-none">27</span>
+<span class="text-[9px] font-medium text-text-tertiary leading-none">Full</span>
+</div>
+<!-- Day 6: Tue 28 (Available) -->
+<button class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border border-success/40 bg-success/5 hover:border-success transition-all" type="button">
+<span class="text-[10px] uppercase font-semibold text-text-secondary tracking-tight">Tue</span>
+<span class="text-base font-bold text-text-primary leading-none">28</span>
+<span class="w-1.5 h-1.5 rounded-full bg-success mt-0.5"></span>
+</button>
+<!-- Day 7: Wed 29 (Available) -->
+<button class="flex-1 min-w-[42px] py-2.5 px-1 rounded-xl flex flex-col items-center justify-center gap-1 border border-success/40 bg-success/5 hover:border-success transition-all" type="button">
+<span class="text-[10px] uppercase font-semibold text-text-secondary tracking-tight">Wed</span>
+<span class="text-base font-bold text-text-primary leading-none">29</span>
+<span class="w-1.5 h-1.5 rounded-full bg-success mt-0.5"></span>
+</button>
+</div>
+<!-- Legend and Quick Status Footer -->
+<div class="flex items-center justify-between pt-1 border-t border-border-hairline text-[11px] text-text-secondary">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-success"></span> Available</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span> Low spots</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-outline-variant"></span> Booked</span>
+</div>
+<span class="text-text-primary font-medium underline underline-offset-2">Calendar</span>
+</div>
+</section>
+<!-- About This Yacht Editorial -->
+<section class="flex flex-col gap-2.5">
+<h2 class="font-title-md text-[18px] text-text-primary">About this yacht</h2>
+<p class="text-body-md text-text-secondary leading-relaxed font-body-md">
+          Explore the secluded turquoise coves and silica sands of the Whitsundays aboard this immaculately kept Lagoon 380. Featuring 4 airy double cabins, an expansive forward trampoline for sun-lounging, and an experienced skipper to guide you through Whitehaven Beach and Hook Passage.
+        </p>
+<!-- Features & Amenities Chips -->
+<div class="flex flex-wrap gap-2 mt-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline text-xs font-medium text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary">scuba_diving</span>
+<span>Snorkel gear included</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline text-xs font-medium text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary">anchor</span>
+<span>Tender &amp; outboard</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline text-xs font-medium text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary">solar_power</span>
+<span>Solar &amp; 220V generator</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border-hairline text-xs font-medium text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary">kayaking</span>
+<span>Stand-up paddleboards</span>
+</div>
+</div>
+</section>
+<!-- Operator & Fleet Guarantee Card -->
+<section class="bg-surface rounded-2xl p-4 border border-border-hairline shadow-soft-card flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-alt border border-border-hairline flex items-center justify-center text-text-primary font-bold text-base">
+            DYC
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h3 class="font-title-md text-[15px] font-semibold text-text-primary">Dream Yacht Charter</h3>
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<p class="text-caption-sm text-caption-sm text-text-secondary">Superhost fleet · 99% response rate</p>
+</div>
+</div>
+<button aria-label="Message operator" class="h-9 px-3.5 rounded-full border border-border-hairline text-xs font-semibold text-text-primary hover:bg-surface-alt transition-colors active:scale-95" type="button">
+          Contact
+        </button>
+</section>
+<!-- Cruising Ground Route Preview -->
+<section class="bg-surface-container-low rounded-2xl p-4 border border-border-hairline flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">explore</span>
+<span class="font-title-md text-sm font-semibold text-text-primary">Recommended 4-Day Itinerary</span>
+</div>
+<span class="text-xs text-text-tertiary">Whitsundays N-Passage</span>
+</div>
+<div class="flex items-center justify-between text-xs text-text-secondary pt-1">
+<div class="flex flex-col"><span class="font-bold text-text-primary">Day 1</span><span>Coral Sea Marina</span></div>
+<span class="text-text-tertiary">→</span>
+<div class="flex flex-col"><span class="font-bold text-text-primary">Day 2</span><span>Whitehaven Beach</span></div>
+<span class="text-text-tertiary">→</span>
+<div class="flex flex-col"><span class="font-bold text-text-primary">Day 3</span><span>Hook Island Bay</span></div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Booking & Pricing Bar (No global tabs - transactional detail screen) -->
+<div class="fixed bottom-0 inset-x-0 max-w-[393px] mx-auto z-40 bg-surface/95 backdrop-blur-md border-t border-border-hairline px-margin py-3.5 shadow-ambient-sheet">
+<div class="flex items-center justify-between gap-3">
+<!-- Pricing Breakdown -->
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-[22px] font-bold text-text-primary tracking-tight">A$1,180</span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">/ day</span>
+</div>
+<span class="text-[11px] font-medium text-success flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check</span>
+            Includes fuel &amp; skipper
+          </span>
+</div>
+<!-- Primary Action Pill Button -->
+<button class="flex-1 max-w-[190px] h-12 bg-primary-container hover:bg-accent-pressed active:scale-95 text-white font-label-md text-label-md font-semibold rounded-full flex items-center justify-center gap-2 shadow-md transition-all duration-150" type="button">
+<span>Check availability</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    // Micro-interaction: Favorite toggle
+    const favBtn = document.getElementById('favorite-toggle');
+    const favIcon = document.getElementById('favorite-icon');
+    let isFav = false;
+    
+    favBtn?.addEventListener('click', () => {
+      isFav = !isFav;
+      if (isFav) {
+        favIcon.style.fontVariationSettings = "'FILL' 1";
+        favIcon.classList.add('text-danger');
+      } else {
+        favIcon.style.fontVariationSettings = "'FILL' 0";
+        favIcon.classList.remove('text-danger');
+      }
+    });
+  </script>
+</body></html>

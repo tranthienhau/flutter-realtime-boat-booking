@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boatingo - Luxury Boat Charter</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Montserrat & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-surface": "#2f3130",
+            "surface-container": "#eeeeed",
+            "secondary-fixed": "#ffdea3",
+            "on-tertiary-fixed-variant": "#484647",
+            "surface-container-highest": "#e3e2e1",
+            "text-tertiary": "#8A8580",
+            "secondary-fixed-dim": "#e7c17a",
+            "border-hairline": "#E7E3DD",
+            "inverse-primary": "#c9c6c3",
+            "surface-container-high": "#e9e8e7",
+            "support-tint": "#F7EFDD",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "on-surface-variant": "#484740",
+            "on-secondary-fixed": "#261900",
+            "tertiary-fixed": "#e5e1e2",
+            "primary-fixed-dim": "#c9c6c3",
+            "surface-variant": "#e3e2e1",
+            "tertiary": "#161617",
+            "tertiary-container": "#2b2a2b",
+            "success": "#16A34A",
+            "primary-container": "#2b2a28",
+            "on-tertiary-container": "#939192",
+            "on-error-container": "#93000a",
+            "surface": "#FFFFFF",
+            "on-tertiary": "#ffffff",
+            "accent-pressed": "#1C1B1A",
+            "surface-tint": "#605e5c",
+            "accent-tint": "#EAE9E8",
+            "danger": "#DC2626",
+            "on-primary-fixed": "#1c1b1a",
+            "warning": "#D97706",
+            "on-background": "#1a1c1c",
+            "outline": "#79776f",
+            "text-secondary": "#5E5952",
+            "secondary": "#765a1d",
+            "on-primary-container": "#94918e",
+            "on-secondary": "#ffffff",
+            "primary": "#161614",
+            "outline-variant": "#cac6bd",
+            "on-tertiary-fixed": "#1c1b1c",
+            "inverse-on-surface": "#f1f0ef",
+            "secondary-container": "#ffd88e",
+            "surface-dim": "#dadad9",
+            "on-surface": "#1a1c1c",
+            "primary-fixed": "#e6e2de",
+            "background": "#faf9f8",
+            "surface-container-low": "#f4f3f2",
+            "on-primary-fixed-variant": "#484644",
+            "on-secondary-container": "#795c1f",
+            "on-error": "#ffffff",
+            "surface-alt": "#F1EEEA",
+            "on-secondary-fixed-variant": "#5c4304",
+            "text-primary": "#181614",
+            "surface-bright": "#faf9f8",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-md": "12px",
+            "margin": "20px",
+            "gutter": "16px",
+            "space-xl": "24px",
+            "space-2xl": "32px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "title-md": ["Montserrat"],
+            "body-md": ["Montserrat"],
+            "label-md": ["Montserrat"],
+            "display-lg": ["Playfair Display"],
+            "caption-sm": ["Montserrat"]
+          },
+          "fontSize": {
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "ambient": "0 1px 2px rgba(24,22,20,0.04), 0 8px 24px rgba(24,22,20,0.06)",
+            "subtle": "0 2px 8px rgba(24,22,20,0.05)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.15); }
+    }
+    .live-pulse {
+      animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen font-body-md selection:bg-secondary-fixed selection:text-primary">
+<!-- Mobile Viewport Wrapper (393px iPhone Centered Canvas) -->
+<div class="max-w-[420px] mx-auto min-h-screen bg-background relative flex flex-col pb-[100px] shadow-2xl">
+<!-- Top Navigation / Search Summary Bar (Shared Component: TopAppBar) -->
+<header class="fixed top-0 left-0 right-0 max-w-[420px] mx-auto w-full z-50 flex items-center justify-between px-margin h-14 bg-surface dark:bg-primary shadow-sm border-b border-border-hairline">
+<!-- Leading Button -->
+<button aria-label="Go back" class="w-9 h-9 rounded-full flex items-center justify-center text-primary dark:text-surface hover:bg-surface-container-low transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Search Summary Pill / Headline -->
+<div class="flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-low border border-border-hairline">
+<span class="font-label-md text-label-md font-semibold text-primary dark:text-surface tracking-tight">Bali · Sat 18 Oct · 4 guests</span>
+</div>
+<!-- Trailing Action -->
+<button aria-label="Filters and tune" class="w-9 h-9 rounded-full flex items-center justify-center text-primary dark:text-surface hover:bg-surface-container-low transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</header>
+<!-- Top Safe Margin Spacer -->
+<div class="h-14"></div>
+<!-- Main Search Results Flow -->
+<main class="px-margin pt-space-lg flex-1 flex flex-col gap-space-lg">
+<!-- Interactive Controls Section: Availability Toggle -->
+<div class="flex items-center justify-between bg-surface rounded-2xl p-space-md border border-border-hairline shadow-subtle">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">Only show boats with space</span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">Instant confirmation available</span>
+</div>
+<!-- Graphite & Brass Toggle (ON state) -->
+<button aria-checked="true" class="w-12 h-6 bg-primary-container rounded-full p-0.5 flex items-center justify-end transition-colors duration-200 focus:outline-none" id="availabilityToggle" role="switch">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed shadow-md transform transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Focal Availability Counter Header -->
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs pt-1">
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-title-md text-[24px] leading-8 font-bold text-text-primary tracking-tight font-title-md">
+            9 boats with space
+          </h1>
+</div>
+<!-- Live Status Badge -->
+<div class="self-start sm:self-auto inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface rounded-full border border-border-hairline shadow-subtle">
+<span class="w-2 h-2 rounded-full bg-success live-pulse"></span>
+<span class="font-caption-sm text-[12px] font-medium text-text-secondary tracking-tight">Live · synced 12s ago</span>
+</div>
+</div>
+<!-- Filter & Sort Scroll Row -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar -mx-margin px-margin py-0.5">
+<!-- Selected Sort Chip (Graphite fill with white text) -->
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-caption-sm font-semibold active:scale-95 transition-transform shadow-subtle" type="button">
+<span>Departure time</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+<!-- Secondary Filter Chips -->
+<button class="flex-shrink-0 inline-flex items-center gap-1 px-3.5 py-2 rounded-full bg-surface border border-border-hairline text-text-primary font-label-md text-caption-sm font-medium hover:bg-surface-container-low transition-colors active:scale-95" type="button">
+<span>All Boat Types</span>
+<span class="material-symbols-outlined text-[16px] text-text-tertiary" data-icon="expand_more">expand_more</span>
+</button>
+<button class="flex-shrink-0 inline-flex items-center gap-1 px-3.5 py-2 rounded-full bg-surface border border-border-hairline text-text-primary font-label-md text-caption-sm font-medium hover:bg-surface-container-low transition-colors active:scale-95" type="button">
+<span>Price</span>
+<span class="material-symbols-outlined text-[16px] text-text-tertiary" data-icon="expand_more">expand_more</span>
+</button>
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface border border-border-hairline text-text-primary font-label-md text-caption-sm font-medium hover:bg-surface-container-low transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary" data-icon="bolt">bolt</span>
+<span>Instant Book</span>
+</button>
+</div>
+<!-- Boat Results List -->
+<div class="flex flex-col gap-5 pt-1">
+<!-- CARD 1: Vedanta (Traditional Phinisi) -->
+<article class="bg-surface rounded-2xl border border-border-hairline shadow-ambient overflow-hidden flex flex-col group transition-all duration-300 hover:border-secondary-fixed">
+<!-- Card Image & Overlay Badges -->
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img alt="Vedanta Traditional Phinisi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1WGJz2MaIEm4Ql2y4ZVlQf1TpmqshID6ANBJWVpW79O5ZIIeqzaheMlYHEfo1Y82K0rNJ_5Q-WUrC2GnzUHTBUwZbxdDwkfojBhbQXS3g92dLIznAsHvC9qAaoseFBvTdEGX6Pj7IYeU2Xlw5s8tqbP4rcC6kZ_OY168_cNBSp5ae8OZpHF_SZcvu1LBL9jGnogaufSqLY0aFl5yYAhgdvSEzZFTzm_fr5kG-ZQgja7ZbiK2v7vQ4Rmhw"/>
+<!-- Live Badge floating on top of photo -->
+<div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface/95 backdrop-blur-sm rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-success live-pulse"></span>
+<span class="font-caption-sm text-[12px] font-semibold text-text-primary">Live · synced 12s ago</span>
+</div>
+<!-- Heart / Wishlist Button -->
+<button aria-label="Save to favorites" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-danger active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<!-- Card Content Body -->
+<div class="p-space-lg flex flex-col gap-3.5">
+<!-- Header: Title, Category Tag, Operator -->
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md font-bold text-text-primary tracking-tight">Vedanta</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-text-secondary font-caption-sm text-[11px] font-medium border border-border-hairline">
+                    Traditional phinisi
+                  </span>
+</div>
+<p class="font-caption-sm text-caption-sm text-text-tertiary mt-0.5">by Archipelago Expeditions</p>
+</div>
+<!-- Rating Badge -->
+<div class="flex items-center gap-1 text-text-primary font-label-md text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary fill-current" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.98</span>
+</div>
+</div>
+<!-- Departure Times & Capacity Pill -->
+<div class="flex items-center justify-between gap-2 pt-1 border-t border-border-hairline/60">
+<div class="flex items-center gap-1.5">
+<span class="font-caption-sm text-[11px] text-text-tertiary font-medium">Departs:</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-text-primary font-caption-sm text-[12px] font-semibold border border-border-hairline">08:00</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-text-primary font-caption-sm text-[12px] font-semibold border border-border-hairline">13:30</span>
+</div>
+<!-- Brass Tint Capacity Chip -->
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-support-tint text-text-primary font-caption-sm text-[12px] font-semibold border border-[#eedab2]">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="airline_seat_recline_normal">airline_seat_recline_normal</span>
+<span>6 seats left</span>
+</div>
+</div>
+<!-- Pricing and Action Footer -->
+<div class="flex items-center justify-between pt-2 border-t border-border-hairline">
+<div class="flex flex-col">
+<span class="font-caption-sm text-[11px] text-text-tertiary">Starting from</span>
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md font-bold text-text-primary">A$240</span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">/ guest</span>
+</div>
+</div>
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-caption-sm font-semibold tracking-wide shadow-subtle hover:bg-accent-pressed active:scale-95 transition-all duration-150" type="button">
+                Reserve
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Gili Express (Fast Boat) -->
+<article class="bg-surface rounded-2xl border border-border-hairline shadow-ambient overflow-hidden flex flex-col group transition-all duration-300 hover:border-secondary-fixed">
+<!-- Card Image & Overlay Badges -->
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img alt="Gili Express Fast Boat Transfer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1UcjR5NhE5NXlXY1LW9oU_nExAlF_FeTF6sfZVNIXTs3bFGI_n59wZ90ThHh_MnyAy7Bx_ufP0ia6MTW1NKTZXYezjaQuznqjZNE0XmgQI0Qf_wUTv-g-TQv8kc0idooGuSwsYWUh137rfOLPBpoOB8yKfbFSiZpWIc-f60-yg0JgiSrA5EBfy1Nb0dGK60ALcL1qHyQc2Y08fwlj-0Hb6fuCyGsR08ZAMpYuib2GcCG2zfb4IAYRPtYY0"/>
+<!-- Live Badge floating on top of photo -->
+<div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface/95 backdrop-blur-sm rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-success live-pulse"></span>
+<span class="font-caption-sm text-[12px] font-semibold text-text-primary">Live · synced 12s ago</span>
+</div>
+<!-- Heart / Wishlist Button -->
+<button aria-label="Save to favorites" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-danger active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<!-- Card Content Body -->
+<div class="p-space-lg flex flex-col gap-3.5">
+<!-- Header: Title, Category Tag, Operator -->
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md font-bold text-text-primary tracking-tight">Gili Express</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-text-secondary font-caption-sm text-[11px] font-medium border border-border-hairline">
+                    Fast boat transfer
+                  </span>
+</div>
+<p class="font-caption-sm text-caption-sm text-text-tertiary mt-0.5">by Bali Blue Wave Sea Transits</p>
+</div>
+<!-- Rating Badge -->
+<div class="flex items-center gap-1 text-text-primary font-label-md text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary fill-current" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.85</span>
+</div>
+</div>
+<!-- Departure Times & Capacity Pill -->
+<div class="flex items-center justify-between gap-2 pt-1 border-t border-border-hairline/60">
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<span class="font-caption-sm text-[11px] text-text-tertiary font-medium">Departs:</span>
+<span class="px-2 py-1 rounded-full bg-surface-container-low text-text-primary font-caption-sm text-[12px] font-semibold border border-border-hairline">09:15</span>
+<span class="px-2 py-1 rounded-full bg-surface-container-low text-text-primary font-caption-sm text-[12px] font-semibold border border-border-hairline">11:45</span>
+<span class="px-2 py-1 rounded-full bg-surface-container-low text-text-primary font-caption-sm text-[12px] font-semibold border border-border-hairline">15:00</span>
+</div>
+<!-- Brass Tint Capacity Chip -->
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-support-tint text-text-primary font-caption-sm text-[12px] font-semibold border border-[#eedab2] flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="airline_seat_recline_normal">airline_seat_recline_normal</span>
+<span>14 seats left</span>
+</div>
+</div>
+<!-- Pricing and Action Footer -->
+<div class="flex items-center justify-between pt-2 border-t border-border-hairline">
+<div class="flex flex-col">
+<span class="font-caption-sm text-[11px] text-text-tertiary">Starting from</span>
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md font-bold text-text-primary">A$85</span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">/ guest</span>
+</div>
+</div>
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-caption-sm font-semibold tracking-wide shadow-subtle hover:bg-accent-pressed active:scale-95 transition-all duration-150" type="button">
+                Reserve
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Lombok Sunset Cruise (Solid Brass Urgency Chip) -->
+<article class="bg-surface rounded-2xl border border-border-hairline shadow-ambient overflow-hidden flex flex-col group transition-all duration-300 hover:border-secondary-fixed">
+<!-- Card Image & Overlay Badges -->
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img alt="Lombok Sunset Cruise luxury catamaran" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH4tqJuqx23R1mNtKPvERKuDuvgOWPdfG5RRqoHswSunWhTqqMi3VtwO-gDWrG_q6ruvY80aYNYkMhRIN07j12-YsOCtnoXF5PKnPCaNpD4uWPt8i_aaI4VFh9Id6rq4CdYSLPK1NMuKU3ZaDCkRBdVH5I7lBVE65MGl_Vv_dyRDdx7n98B6rB_uXCjiOKTDkDV9DVi8UVt5SuEihl3R53k7Zvj8FESPX8PfKSt_ATnzEeyKH4wb5cbX_BlGY-sUEmX1cUkLSL8VI"/>
+<!-- Live Badge floating on top of photo -->
+<div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface/95 backdrop-blur-sm rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-success live-pulse"></span>
+<span class="font-caption-sm text-[12px] font-semibold text-text-primary">Live · synced 12s ago</span>
+</div>
+<!-- Heart / Wishlist Button -->
+<button aria-label="Save to favorites" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-danger active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<!-- Card Content Body -->
+<div class="p-space-lg flex flex-col gap-3.5">
+<!-- Header: Title, Category Tag, Operator -->
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md font-bold text-text-primary tracking-tight">Lombok Sunset Cruise</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-text-secondary font-caption-sm text-[11px] font-medium border border-border-hairline">
+                    Catamaran charter
+                  </span>
+</div>
+<p class="font-caption-sm text-caption-sm text-text-tertiary mt-0.5">by Serenity Charters Bali</p>
+</div>
+<!-- Rating Badge -->
+<div class="flex items-center gap-1 text-text-primary font-label-md text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary fill-current" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+<!-- Departure Times & Solid Brass Capacity Pill -->
+<div class="flex items-center justify-between gap-2 pt-1 border-t border-border-hairline/60">
+<div class="flex items-center gap-1.5">
+<span class="font-caption-sm text-[11px] text-text-tertiary font-medium">Departs:</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-text-primary font-caption-sm text-[12px] font-semibold border border-border-hairline">16:30 Sunset</span>
+</div>
+<!-- SOLID BRASS Urgency Chip (#D4B06A with dark graphite text) -->
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-primary-container font-caption-sm text-[12px] font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_top">hourglass_top</span>
+<span>Last seat</span>
+</div>
+</div>
+<!-- Pricing and Action Footer -->
+<div class="flex items-center justify-between pt-2 border-t border-border-hairline">
+<div class="flex flex-col">
+<span class="font-caption-sm text-[11px] text-text-tertiary">Starting from</span>
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md font-bold text-text-primary">A$310</span>
+<span class="font-caption-sm text-caption-sm text-text-secondary">/ guest</span>
+</div>
+</div>
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-caption-sm font-semibold tracking-wide shadow-subtle hover:bg-accent-pressed active:scale-95 transition-all duration-150" type="button">
+                Reserve
+              </button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Shared Component: BottomNavBar) -->
+<!-- Exactly 4 tabs: Explore, Search (Active), Bookings, Profile -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[420px] mx-auto w-full z-50 flex justify-around items-center px-margin pt-space-sm pb-space-lg bg-surface dark:bg-primary border-t border-border-hairline">
+<!-- Tab 1: Explore -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-outline-variant hover:text-primary dark:hover:text-surface transition-colors active:scale-95 duration-150" href="#explore">
+<span class="material-symbols-outlined text-[24px]" data-icon="explore">explore</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Explore</span>
+</a>
+<!-- Tab 2: Search (MANDATORY ACTIVE TAB) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-surface font-semibold after:content-[''] after:w-1.5 after:h-1.5 after:bg-secondary after:rounded-full after:mt-1 hover:text-primary dark:hover:text-surface transition-colors active:scale-95 duration-150" href="#search">
+<span class="material-symbols-outlined text-[24px]" data-icon="search" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Search</span>
+</a>
+<!-- Tab 3: Bookings -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-outline-variant hover:text-primary dark:hover:text-surface transition-colors active:scale-95 duration-150" href="#bookings">
+<span class="material-symbols-outlined text-[24px]" data-icon="sailing">sailing</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Bookings</span>
+</a>
+<!-- Tab 4: Profile -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-outline-variant hover:text-primary dark:hover:text-surface transition-colors active:scale-95 duration-150" href="#profile">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="font-caption-sm text-caption-sm mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+<!-- Interactive Micro-Interactions Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle Switch logic
+      const toggle = document.getElementById('availabilityToggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const isChecked = toggle.getAttribute('aria-checked') === 'true';
+          const newState = !isChecked;
+          toggle.setAttribute('aria-checked', String(newState));
+          
+          const thumb = toggle.querySelector('div');
+          if (newState) {
+            toggle.classList.remove('bg-outline-variant', 'justify-start');
+            toggle.classList.add('bg-primary-container', 'justify-end');
+            if (thumb) {
+              thumb.classList.remove('bg-surface');
+              thumb.classList.add('bg-secondary-fixed');
+            }
+          } else {
+            toggle.classList.remove('bg-primary-container', 'justify-end');
+            toggle.classList.add('bg-outline-variant', 'justify-start');
+            if (thumb) {
+              thumb.classList.remove('bg-secondary-fixed');
+              thumb.classList.add('bg-surface');
+            }
+          }
+        });
+      }
+
+      // Favorite button micro-animation
+      const favoriteButtons = document.querySelectorAll('button[aria-label="Save to favorites"]');
+      favoriteButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            const isFilled = icon.getAttribute('data-icon') === 'favorite';
+            if (isFilled) {
+              icon.setAttribute('data-icon', 'favorite_border');
+              icon.textContent = 'favorite_border';
+              icon.style.fontVariationSettings = "'FILL' 0";
+              btn.classList.remove('text-danger');
+            } else {
+              icon.setAttribute('data-icon', 'favorite');
+              icon.textContent = 'favorite';
+              icon.style.fontVariationSettings = "'FILL' 1";
+              btn.classList.add('text-danger');
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body></html>

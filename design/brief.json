@@ -1,0 +1,82 @@
+{
+  "title": "Boatingo",
+  "slug": "boatingo",
+  "domain": "travel",
+  "style": "bright",
+  "source": "clients/Adam/FY 2026 tech dev and R&D activity.pdf (Boatingo R&D summary, see clients/Adam/CHANGELOG.md)",
+  "features": [
+    "Destination discovery (Fiji, Bali, Singapore, Palawan, Tahiti, Maldives, Phuket, Whitsundays)",
+    "Real-time availability synced from operator systems (Ankor, Nausys)",
+    "Search by date showing only boats with available capacity",
+    "Departure-time slots with live seats-left counts",
+    "Seat hold with countdown during payment (seats return if payment fails or times out)",
+    "Last-seat race handling - one booking wins, the other sees No seats available",
+    "Unique booking IDs + email/SMS confirmation",
+    "Modify and cancel bookings, capacity released instantly",
+    "Weather / operational cancellation notifications",
+    "Operator / agent view: live sync status per source + block a boat"
+  ],
+  "screenCount": 18,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": ["Explore", "Search", "Bookings", "Profile"],
+      "note": "Exactly 4 tabs in this order, rounded outline icons: Explore=compass, Search=calendar-search, Bookings=ticket, Profile=user. Active tab graphite #2B2A28 icon+label with a small brass #D4B06A dot under it, inactive #8A8580. Flat white bar, hairline top border, no gradient."
+    },
+    "statusBar": "Live availability pill reused on every listing/detail: small pill with pulsing green #16A34A dot + 'Live' + 'synced 12s ago' caption. Seats-left chip: brass tint fill, graphite text, e.g. '3 seats left'.",
+    "controls": "Primary button: pill, graphite #2B2A28 fill, white label, pressed #1C1B1A, disabled #D9D5CF. Secondary: outline graphite 1.5px. Text input: 12px radius, white, hairline border #E7E3DD, focus = brass ring, error = danger ring. Card: 20px radius, white, soft shadow. Chip: pill, selected = graphite fill white text, unselected = #F1EEEA fill."
+  },
+  "screens": [
+    {"name": "onboarding", "group": "onboarding", "nav": "none", "states": ["default"], "purpose": "First-run welcome selling live boat availability", "content": "Full-bleed real photo of a white luxury catamaran anchored in turquoise water off Palawan at golden hour, soft graphite-to-transparent gradient at bottom; Boatingo wordmark; Playfair headline 'Book the boat. See it live.'; body 'Real-time availability from 400+ operators across Asia Pacific.'; 3-dot pager; primary 'Get started'; text link 'I already have an account'"},
+    {"name": "sign-in", "group": "onboarding", "nav": "none", "states": ["default"], "purpose": "Sign in or create account", "content": "Back arrow, Playfair title 'Welcome aboard', email field 'olivia.hart@gmail.com', password field, primary 'Sign in', divider 'or', 'Continue with Apple' and 'Continue with Google' outline buttons, small print about booking confirmations by email and SMS"},
+    {"name": "explore-home", "group": "core", "nav": "Explore", "states": ["default"], "purpose": "Discover destinations and featured boats", "content": "Greeting 'Good morning, Olivia', search pill 'Where to? Any date', horizontal destination cards with real photos: Fiji 24 boats, Bali 31 boats, Singapore 18 boats, Palawan 12 boats, Tahiti 9 boats, Maldives 15 boats; FOCAL hero card with brass-to-graphite soft gradient overlay on real photo of motor yacht 'Prometheus Cool' on Sydney Harbour, Live pill, '2 seats left today', 'from A$1,450'; section 'Available today near you' list of 2 boats with seats-left chips"},
+    {"name": "destination", "group": "core", "nav": "Explore", "states": ["default"], "purpose": "Browse boats in one destination with live capacity", "content": "Header real photo of Palawan limestone lagoons, title 'Palawan, Philippines', '12 boats - 7 available today', filter chips (All, Catamaran, Motor yacht, Fast boat, Day trip), list cards with real boat photos: 'Lagoon 380 - 4 cab.' Europa Yachts, 3 seats left, from US$420/day; 'Vedanta' Phinisi, 8 seats left; 'Island Hopper' fast boat, Sold out today (greyed); each card has Live pill"},
+    {"name": "search-results", "group": "core", "nav": "Search", "states": ["default", "empty"], "purpose": "Search by date, only boats with capacity shown", "content": "Search bar 'Bali - Sat 18 Oct - 4 guests', toggle on 'Only show available' , result count '9 boats with space', sort chip, result cards with real photos (Vedanta phinisi, Gili fast boat, Lombok sunset cruise) each with departure time chips 08:00 / 13:30 and seats left, Live pill 'synced 12s ago'"},
+    {"name": "search-results-empty", "group": "core", "nav": "Search", "states": ["empty"], "purpose": "No boats with capacity for the chosen date", "content": "Same search bar 'Tahiti - Sun 19 Oct - 10 guests', soft illustration of an empty dock at dawn in brass and graphite tones, title 'Fully booked for this date', body 'Every boat in Tahiti is at capacity for 10 guests on Sun 19 Oct.', primary 'Try nearby dates', chips of next dates with availability (Mon 20 - 3 boats, Tue 21 - 5 boats), secondary 'Get notified if a seat opens'"},
+    {"name": "boat-detail", "group": "detail", "nav": "none", "states": ["default"], "purpose": "Full boat profile with specs and live availability", "content": "Hero real photo carousel of 'Lagoon 380 - 4 cab.' catamaran in Coral Sea, back + heart buttons, title, 'Airlie Beach, Whitsundays - Dream Yacht Charter', rating 4.8 (126), Live pill 'synced from Nausys 8s ago', spec grid (Length 11.6 m, Cabins 4, Berths 8, Max guests 10, Year 2019, Skipper included), FOCAL 'Next 7 days' availability strip with day cells colored available/limited/full, description, sticky bottom bar 'from A$1,180 / day' + primary 'Check availability'"},
+    {"name": "availability-calendar", "group": "detail", "nav": "none", "states": ["default"], "purpose": "Pick date and departure slot with live seats left", "content": "Sheet title 'Choose a departure', month calendar October 2026 with per-day dots (green available, brass limited, struck-through full), selected Sat 18; departure slot list: 08:00 Half day 6/10 seats left, 13:30 Sunset 1/10 seat left (brass highlight 'Last seat'), 17:00 Private charter Full; guest stepper 2 adults 1 child; Live pill 'Availability updates live'; primary 'Hold seats for 10:00'"},
+    {"name": "checkout-hold", "group": "detail", "nav": "none", "states": ["default"], "purpose": "Pay while seats are held with countdown", "content": "FOCAL countdown ring '09:42 seats held for you' in brass; booking summary card (Lagoon 380, Sat 18 Oct, 13:30 Sunset, 3 guests, A$1,180), lead guest fields, saved card Visa 4242, note 'If payment fails or the timer ends, your seats are released to other guests.', primary 'Pay A$1,180'"},
+    {"name": "last-seat-taken", "group": "detail", "nav": "none", "states": ["error"], "purpose": "Lost the race for the last seat", "content": "Dimmed checkout behind, bottom sheet with warning icon in amber, title 'No seats available', body 'Someone just booked the last seat on the 13:30 Sunset departure. You were not charged.', live list of alternatives: 08:00 Half day 6 seats, Sun 19 13:30 Sunset 4 seats, similar boat 'Blue Horizon' 5 seats; primary 'Book 08:00 instead', text button 'Back to calendar'"},
+    {"name": "booking-confirmed", "group": "detail", "nav": "none", "states": ["default"], "purpose": "Confirmation with unique booking ID", "content": "Brass-to-graphite soft gradient header with check mark, Playfair 'You are on board', FOCAL booking ID 'BTG-26-0418-7Q3K' with copy icon, card: boat real photo thumbnail, date/time, guests, meeting point 'Abell Point Marina, Pier C', chips 'Email sent' and 'SMS sent', buttons 'Add to calendar' and 'View booking'"},
+    {"name": "my-bookings", "group": "core", "nav": "Bookings", "states": ["default", "empty"], "purpose": "Upcoming and past bookings", "content": "Segmented Upcoming / Past, upcoming cards with real boat photos: 'Lagoon 380 - Sat 18 Oct 13:30 - 3 guests - Confirmed', 'Vedanta - Bali - Thu 6 Nov - Confirmed', one card with amber 'Weather watch' badge; each shows booking ID"},
+    {"name": "my-bookings-empty", "group": "core", "nav": "Bookings", "states": ["empty"], "purpose": "No bookings yet", "content": "Illustration of a small boat on calm water in brass and graphite duotone, title 'No trips booked yet', body 'Boats with live availability are waiting in 8 destinations.', primary 'Explore destinations'"},
+    {"name": "booking-detail", "group": "detail", "nav": "Bookings", "states": ["default"], "purpose": "Manage one booking", "content": "Header real photo, booking ID BTG-26-0418-7Q3K, status Confirmed, timeline (Booked 1 Oct, Paid, Reminder 17 Oct, Departure 18 Oct 13:30), skipper real photo avatar 'Captain Liam Reeves', meeting point mini map, actions 'Change date or time' and 'Cancel booking' (danger text), policy 'Free cancellation until 16 Oct'"},
+    {"name": "cancel-booking", "group": "detail", "nav": "none", "states": ["default"], "purpose": "Confirm cancellation and release seats", "content": "Title 'Cancel this booking?', summary, refund breakdown A$1,180 full refund to Visa 4242, reason chips (Plans changed, Weather, Found another boat), info row 'Your 3 seats go back on sale instantly', danger primary 'Cancel booking', secondary 'Keep booking'"},
+    {"name": "notifications", "group": "settings", "nav": "none", "states": ["default"], "purpose": "Trip alerts incl. weather cancellations", "content": "Title 'Notifications', FOCAL alert card in amber tint 'Weather cancellation: Vedanta, Thu 6 Nov - strong winds forecast for Lombok Strait. Full refund issued.' with 'Rebook' button; list: 'Seat opened on Tahiti Sun 19 Oct', 'Reminder: Lagoon 380 tomorrow 13:30', 'Booking BTG-26-0418-7Q3K confirmed'"},
+    {"name": "operator-console", "group": "settings", "nav": "Profile", "states": ["default"], "purpose": "Agent view of fleet sync and boat blocking", "content": "Title 'Operator console - Dream Yacht Charter', sync status card per source: Nausys Connected last sync 8s ago 142 boats, Ankor Connected 21s ago 58 boats, Manual 6 boats; FOCAL today's capacity bar 412/520 seats booked; fleet list rows with real boat thumbnails and 'Block' toggles (Lagoon 380 active, Bali 4.6 blocked for maintenance), conflict log '0 overbookings this month'"},
+    {"name": "profile", "group": "settings", "nav": "Profile", "states": ["default"], "purpose": "Account and preferences", "content": "Real photo avatar 'Olivia Hart', 'Member since 2025 - 4 trips', rows: Personal details, Payment methods, Notifications (email + SMS on), Currency AUD, Saved boats 6, Operator console (badge 'Agent'), Help, Sign out"}
+  ],
+  "designSystem": {
+    "variant": "P53",
+    "theme": "light",
+    "frame": "393x852 mobile, top safe inset 59px, bottom 34px",
+    "color": {
+      "background": "#F9F8F7",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F1EEEA",
+      "accent": "#2B2A28",
+      "accentFill": "#2B2A28",
+      "accentTint": "#EAE9E8",
+      "accentPressed": "#1C1B1A",
+      "support": "#D4B06A",
+      "supportTint": "#F7EFDD",
+      "text": {"primary": "#181614", "secondary": "#5E5952", "tertiary": "#8A8580"},
+      "border": "#E7E3DD",
+      "success": "#16A34A", "warning": "#D97706", "danger": "#DC2626"
+    },
+    "type": {
+      "fontFamily": "Montserrat",
+      "displayFamily": "Playfair Display",
+      "numeralFamily": "Montserrat (tabular)",
+      "display": "32 / 700 / -0.02em",
+      "title": "20 / 600",
+      "body": "16 / 400",
+      "label": "14 / 500",
+      "caption": "13 / 500"
+    },
+    "radius": {"card": 20, "control": 14, "input": 12, "pill": 999},
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(24,22,20,.04) + 0 8px 24px rgba(24,22,20,.06)",
+    "icons": "Lucide-style rounded outline, 24px, 1.75 stroke, one set only",
+    "a11y": "white labels only on graphite #2B2A28; brass #D4B06A carries graphite text only; tap targets >= 44pt"
+  }
+}

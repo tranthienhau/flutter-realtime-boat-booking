@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My trips - Boatingo</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "support-tint": "#F7EFDD",
+            "secondary": "#765a1d",
+            "text-primary": "#181614",
+            "on-tertiary-container": "#939192",
+            "error": "#ba1a1a",
+            "surface-alt": "#F1EEEA",
+            "on-error": "#ffffff",
+            "surface-container-high": "#e9e8e7",
+            "on-tertiary-fixed-variant": "#484647",
+            "outline-variant": "#cac6bd",
+            "text-secondary": "#5E5952",
+            "tertiary-container": "#2b2a2b",
+            "border-hairline": "#E7E3DD",
+            "success": "#16A34A",
+            "on-primary-fixed": "#1c1b1a",
+            "surface-container": "#eeeeed",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#2f3130",
+            "on-tertiary-fixed": "#1c1b1c",
+            "secondary-fixed-dim": "#e7c17a",
+            "secondary-fixed": "#ffdea3",
+            "accent-tint": "#EAE9E8",
+            "primary-container": "#2b2a28",
+            "secondary-container": "#ffd88e",
+            "surface-variant": "#e3e2e1",
+            "surface-dim": "#dadad9",
+            "on-primary": "#ffffff",
+            "surface-tint": "#605e5c",
+            "outline": "#79776f",
+            "surface-bright": "#faf9f8",
+            "error-container": "#ffdad6",
+            "accent-pressed": "#1C1B1A",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#f1f0ef",
+            "tertiary": "#161617",
+            "surface": "#FFFFFF",
+            "on-surface-variant": "#484740",
+            "on-surface": "#1a1c1c",
+            "surface-container-low": "#f4f3f2",
+            "on-primary-fixed-variant": "#484644",
+            "tertiary-fixed": "#e5e1e2",
+            "inverse-primary": "#c9c6c3",
+            "on-error-container": "#93000a",
+            "background": "#faf9f8",
+            "tertiary-fixed-dim": "#c9c5c6",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#e3e2e1",
+            "warning": "#D97706",
+            "on-secondary-fixed": "#261900",
+            "text-tertiary": "#8A8580",
+            "danger": "#DC2626",
+            "on-primary-container": "#94918e",
+            "primary": "#161614",
+            "on-secondary-container": "#795c1f",
+            "primary-fixed-dim": "#c9c6c3",
+            "on-background": "#1a1c1c",
+            "on-secondary-fixed-variant": "#5c4304",
+            "primary-fixed": "#e6e2de"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-lg": "16px",
+            "space-2xl": "32px",
+            "margin": "20px",
+            "gutter": "16px",
+            "space-xl": "24px",
+            "space-md": "12px"
+          },
+          "fontFamily": {
+            "display-lg": ["Playfair Display"],
+            "caption-sm": ["Montserrat"],
+            "body-md": ["Montserrat"],
+            "label-md": ["Montserrat"],
+            "title-md": ["Montserrat"]
+          },
+          "fontSize": {
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption-sm": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      user-select: none;
+    }
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen flex flex-col justify-between items-center selection:bg-support-tint selection:text-text-primary">
+<!-- iPhone Mobile Container (393px × 852px viewport frame emulation) -->
+<div class="w-full max-w-[393px] min-h-[852px] bg-background relative flex flex-col justify-between overflow-x-hidden shadow-[0_20px_50px_rgba(24,22,20,0.08)]">
+<!-- Top Area: Status Bar + App Bar Header -->
+<header class="w-full bg-surface dark:bg-primary-container z-40 shrink-0">
+<!-- iOS Status Bar (54px standard safe zone) -->
+<div class="h-[48px] pt-3 px-6 flex justify-between items-center text-text-primary font-caption-sm text-caption-sm select-none">
+<span class="font-semibold text-[15px] tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- TopAppBar Shared Component -->
+<div class="flex justify-between items-center h-14 px-margin w-full max-w-md mx-auto">
+<!-- Leading Icon -->
+<button aria-label="Marine overview" class="w-9 h-9 rounded-full flex items-center justify-center text-primary dark:text-surface hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 active:opacity-80" type="button">
+<span class="material-symbols-outlined text-[22px]">directions_boat</span>
+</button>
+<!-- Brand Title -->
+<h1 class="font-display-lg text-title-md text-primary dark:text-surface text-center tracking-tight">
+          My trips
+        </h1>
+<!-- Trailing Action -->
+<button aria-label="Trip filters" class="w-9 h-9 rounded-full flex items-center justify-center text-primary dark:text-surface hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 active:opacity-80" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Segmented Control Bar -->
+<div class="px-margin pt-space-xs pb-space-md">
+<div aria-label="Trip Status Filter" class="bg-surface-alt p-1 rounded-full flex items-center shadow-inner" role="tablist">
+<!-- Upcoming Tab (Active) -->
+<button aria-selected="true" class="flex-1 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-caption-sm text-center shadow-sm transition-all duration-150" id="tab-upcoming" role="tab">
+            Upcoming
+          </button>
+<!-- Past Tab (Inactive) -->
+<button aria-selected="false" class="flex-1 py-2 rounded-full text-text-secondary hover:text-text-primary font-label-md text-caption-sm text-center transition-all duration-150" id="tab-past" role="tab">
+            Past
+          </button>
+</div>
+</div>
+</header>
+<!-- Main Empty State Canvas -->
+<main class="flex-1 flex flex-col items-center justify-center px-margin text-center pb-20 pt-2">
+<!-- Focal Artwork Frame -->
+<div class="relative w-64 h-64 mb-space-lg flex items-center justify-center rounded-[24px] overflow-hidden bg-surface p-2 shadow-[0_1px_2px_rgba(24,22,20,0.04),0_8px_24px_rgba(24,22,20,0.06)] border border-border-hairline">
+<!-- Sailboat on Calm Waters Image -->
+<img alt="Sailboat drifting peacefully on still waters toward a soft golden sun" class="w-full h-full object-contain rounded-[20px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe2TmuMoc8NQanRDrDg9mluFLHYgjlZFY4SdwyLQEuNcxRoo4nKH1HkPQTesHkipkumvMaH1T8u5Ej44xYyjuFPTPyGWqYQdVrkbghnpGuzFZv2Lq1hF5IuYSQDkUbuiPXBrnOBeKda_huxoCiN8L_wpXXe94bkcJi_a6Xv7rrK1DMzkagbndQzI6Uxupz4sz__rpp0aAVzV2GfvL3ErUvifTvWLkiBSVD_SK7omDB3_itAcHUxmRmLunw5nF8KDX1tUaht6Z6ats"/>
+<!-- Subtle yacht hardware accent glow -->
+<div class="absolute inset-0 pointer-events-none rounded-[24px] ring-1 ring-inset ring-black/5"></div>
+</div>
+<!-- Typography Block -->
+<div class="space-y-space-sm max-w-xs">
+<h2 class="font-display-lg text-display-lg text-text-primary tracking-tight">
+          No trips booked yet
+        </h2>
+<p class="font-body-md text-caption-sm text-text-secondary leading-relaxed">
+          Boats with live availability are waiting in 8 destinations.
+        </p>
+</div>
+<!-- Action Button & Concierge Note -->
+<div class="w-full mt-space-xl space-y-space-md flex flex-col items-center">
+<!-- Primary Action -->
+<button class="w-full h-12 rounded-full bg-primary-container hover:bg-accent-pressed active:scale-[0.98] text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm transition-all duration-150" type="button">
+<span>Explore destinations</span>
+<span class="material-symbols-outlined text-[18px]">explore</span>
+</button>
+<!-- Secondary Concierge Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-support-tint/60 text-secondary border border-secondary-container/50">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">anchor</span>
+<span class="font-caption-sm text-[12px] font-medium text-text-secondary">
+            Need help? <a class="text-secondary font-semibold hover:underline" href="#">Chat with our concierge</a>
+</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shared Component -->
+<!-- Destination count: 4 | Bookings is active as page matches 'Bookings' intent -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-gutter bg-surface dark:bg-primary-container max-w-[393px] mx-auto right-0">
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-tertiary font-caption-sm hover:text-primary dark:hover:text-surface transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+<span class="text-[11px] mt-0.5 tracking-tight">Explore</span>
+</a>
+<!-- Search -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-tertiary font-caption-sm hover:text-primary dark:hover:text-surface transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<span class="text-[11px] mt-0.5 tracking-tight">Search</span>
+</a>
+<!-- Bookings (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center text-primary dark:text-surface font-label-md relative after:content-[''] after:w-1.5 after:h-1.5 after:bg-secondary after:rounded-full after:mt-1 hover:text-primary dark:hover:text-surface transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">sailing</span>
+<span class="text-[11px] mt-0.5 font-semibold tracking-tight">Bookings</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-tertiary font-caption-sm hover:text-primary dark:hover:text-surface transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[11px] mt-0.5 tracking-tight">Profile</span>
+</a>
+</nav>
+<!-- iOS Home Indicator Bottom Safe Area Space -->
+<div class="h-4 w-full bg-surface dark:bg-primary-container fixed bottom-0 left-0 right-0 max-w-[393px] mx-auto pointer-events-none z-50 flex justify-center items-end pb-1">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</div>
+<!-- Interactive State Switching for Segmented Control -->
+<script>
+    const tabUpcoming = document.getElementById('tab-upcoming');
+    const tabPast = document.getElementById('tab-past');
+
+    if (tabUpcoming && tabPast) {
+      tabUpcoming.addEventListener('click', () => {
+        tabUpcoming.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        tabUpcoming.classList.remove('text-text-secondary');
+        tabUpcoming.setAttribute('aria-selected', 'true');
+
+        tabPast.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        tabPast.classList.add('text-text-secondary');
+        tabPast.setAttribute('aria-selected', 'false');
+      });
+
+      tabPast.addEventListener('click', () => {
+        tabPast.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        tabPast.classList.remove('text-text-secondary');
+        tabPast.setAttribute('aria-selected', 'true');
+
+        tabUpcoming.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        tabUpcoming.classList.add('text-text-secondary');
+        tabUpcoming.setAttribute('aria-selected', 'false');
+      });
+    }
+  </script>
+</body></html>
