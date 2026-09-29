@@ -1,0 +1,274 @@
+[
+ {
+  "name": "hero-onboarding-palawan-catamaran",
+  "file": "assets/images/hero-onboarding-palawan-catamaran.jpg",
+  "role": "hero",
+  "screens": [
+   "01-onboarding"
+  ],
+  "source": "stitch",
+  "prompt": "Catamaran in turquoise lagoon at Palawan golden hour"
+ },
+ {
+  "name": "hero-signin-marina-sunrise",
+  "file": "assets/images/hero-signin-marina-sunrise.jpg",
+  "role": "hero",
+  "screens": [
+   "02-sign-in"
+  ],
+  "source": "stitch",
+  "prompt": "Luxury yacht marina at sunrise"
+ },
+ {
+  "name": "dest-fiji",
+  "file": "assets/images/dest-fiji.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home",
+   "04-destination"
+  ],
+  "source": "stitch",
+  "prompt": "Fiji"
+ },
+ {
+  "name": "dest-bali",
+  "file": "assets/images/dest-bali.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home"
+  ],
+  "source": "stitch",
+  "prompt": "Bali"
+ },
+ {
+  "name": "dest-singapore",
+  "file": "assets/images/dest-singapore.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home"
+  ],
+  "source": "stitch",
+  "prompt": "Singapore"
+ },
+ {
+  "name": "boat-vedanta-phinisi",
+  "file": "assets/images/boat-vedanta-phinisi.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "04-destination",
+   "05-search-results",
+   "12-my-bookings",
+   "16-notifications"
+  ],
+  "source": "stitch",
+  "prompt": "Vedanta Traditional Phinisi"
+ },
+ {
+  "name": "boat-gili-express",
+  "file": "assets/images/boat-gili-express.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "04-destination",
+   "05-search-results"
+  ],
+  "source": "stitch",
+  "prompt": "Gili Express Fast Boat Transfer"
+ },
+ {
+  "name": "boat-lombok-sunset-cruise",
+  "file": "assets/images/boat-lombok-sunset-cruise.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "05-search-results"
+  ],
+  "source": "stitch",
+  "prompt": "Lombok Sunset Cruise luxury catamaran"
+ },
+ {
+  "name": "illustration-empty-dock",
+  "file": "assets/images/illustration-empty-dock.jpg",
+  "role": "illustration",
+  "screens": [
+   "06-search-results-empty"
+  ],
+  "source": "stitch",
+  "prompt": "Wooden dock over serene mist at dawn"
+ },
+ {
+  "name": "boat-lagoon380-hero",
+  "file": "assets/images/boat-lagoon380-hero.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "07-boat-detail",
+   "08-availability-calendar",
+   "09-checkout-hold",
+   "11-booking-confirmed",
+   "12-my-bookings",
+   "14-booking-detail",
+   "15-cancel-booking"
+  ],
+  "source": "stitch",
+  "prompt": "Lagoon 380 Catamaran Serenity sailing in Whitsundays turquoise waters at sunset"
+ },
+ {
+  "name": "boat-lagoon380-anchored",
+  "file": "assets/images/boat-lagoon380-anchored.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "10-last-seat-taken"
+  ],
+  "source": "stitch",
+  "prompt": "A modern luxury Lagoon 380 sailing catamaran anchored in crystal turquoise waters under warm golden sunlight, "
+ },
+ {
+  "name": "boat-blue-horizon",
+  "file": "assets/images/boat-blue-horizon.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "10-last-seat-taken"
+  ],
+  "source": "stitch",
+  "prompt": "A sleek modern Blue Horizon sailing catamaran gliding through smooth deep blue tropical seas in early afternoo"
+ },
+ {
+  "name": "boat-prometheus-cool",
+  "file": "assets/images/boat-prometheus-cool.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "12-my-bookings"
+  ],
+  "source": "stitch",
+  "prompt": "Luxury motor yacht Prometheus Cool cruising Sydney Harbour at sunset"
+ },
+ {
+  "name": "illustration-empty-trips",
+  "file": "assets/images/illustration-empty-trips.jpg",
+  "role": "illustration",
+  "screens": [
+   "13-my-bookings-empty"
+  ],
+  "source": "stitch",
+  "prompt": "Sailboat drifting peacefully on still waters toward a soft golden sun"
+ },
+ {
+  "name": "portrait-captain-liam-reeves",
+  "file": "assets/images/portrait-captain-liam-reeves.jpg",
+  "role": "portrait",
+  "screens": [
+   "14-booking-detail"
+  ],
+  "source": "stitch",
+  "prompt": "Portrait of Captain Liam Reeves"
+ },
+ {
+  "name": "map-abell-point-marina",
+  "file": "assets/images/map-abell-point-marina.jpg",
+  "role": "illustration",
+  "screens": [
+   "14-booking-detail"
+  ],
+  "source": "stitch",
+  "prompt": "Vector illustrated aerial nautical map of Abell Point Marina Pier C"
+ },
+ {
+  "name": "fleet-lagoon",
+  "file": "assets/images/fleet-lagoon.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "17-operator-console"
+  ],
+  "source": "stitch",
+  "prompt": "A modern luxury Lagoon catamaran sailing through crystal clear azure waters in the Whitsunday Islands with war"
+ },
+ {
+  "name": "fleet-bali-46",
+  "file": "assets/images/fleet-bali-46.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "17-operator-console"
+  ],
+  "source": "stitch",
+  "prompt": "An elegant Bali sailing catamaran anchored peacefully near lush tropical island cliffs with calm turquoise wat"
+ },
+ {
+  "name": "fleet-superyacht",
+  "file": "assets/images/fleet-superyacht.jpg",
+  "role": "thumbnail",
+  "screens": [
+   "17-operator-console"
+  ],
+  "source": "stitch",
+  "prompt": "A sleek black and white luxury motor superyacht cruising near Sydney Harbour at sunset with warm amber city li"
+ },
+ {
+  "name": "avatar-olivia-hart",
+  "file": "assets/images/avatar-olivia-hart.jpg",
+  "role": "avatar",
+  "screens": [
+   "03-explore-home",
+   "18-profile"
+  ],
+  "source": "stitch",
+  "prompt": "Portrait of Olivia Hart"
+ },
+ {
+  "name": "dest-palawan",
+  "file": "assets/images/dest-palawan.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home",
+   "04-destination"
+  ],
+  "source": "higgsfield",
+  "job": "b4d473b9-a446-40d1-80b1-bc1a1be6b463",
+  "prompt": "editorial destination photo, see logs/02c-images.md"
+ },
+ {
+  "name": "dest-tahiti",
+  "file": "assets/images/dest-tahiti.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home",
+   "04-destination"
+  ],
+  "source": "higgsfield",
+  "job": "75659b81-3f0b-4d98-9ac0-67f722e7d51f",
+  "prompt": "editorial destination photo, see logs/02c-images.md"
+ },
+ {
+  "name": "dest-maldives",
+  "file": "assets/images/dest-maldives.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home",
+   "04-destination"
+  ],
+  "source": "higgsfield",
+  "job": "2fa580ef-8053-4448-a1f6-b7a32944e867",
+  "prompt": "editorial destination photo, see logs/02c-images.md"
+ },
+ {
+  "name": "dest-phuket",
+  "file": "assets/images/dest-phuket.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home",
+   "04-destination"
+  ],
+  "source": "higgsfield",
+  "job": "6d8053b9-5eab-4e59-b330-0ad4467d1677",
+  "prompt": "editorial destination photo, see logs/02c-images.md"
+ },
+ {
+  "name": "dest-whitsundays",
+  "file": "assets/images/dest-whitsundays.jpg",
+  "role": "cover",
+  "screens": [
+   "03-explore-home",
+   "04-destination"
+  ],
+  "source": "higgsfield",
+  "job": "ff7e28fc-ce71-4bee-a567-a5615a57a8ed",
+  "prompt": "editorial destination photo, see logs/02c-images.md"
+ }
+]
